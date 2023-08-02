@@ -1,0 +1,585 @@
+<app-bannering1
+  [title]="'Top Authors'"
+  [items]="['Pages', 'User Lists']"
+></app-bannering1>
+<!-- User-All-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-sm-flex mb-5">
+          <h3 class="mb-sm-0 mt-1 fs-24"><b>3,789</b> Authors</h3>
+          <ul class="pagination ms-auto">
+            <li class="page-item page-prev disabled">
+              <a class="page-link" href="javascript:void(0);" tabindex="-1"
+                >Prev</a
+              >
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="javascript:void(0);">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="javascript:void(0);">5</a>
+            </li>
+            <li class="page-item page-next">
+              <a class="page-link" href="javascript:void(0);">Next</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="table-responsive table-bordered border-0">
+            <table
+              class="table border-0 table-vcenter text-nowrap border-top mb-0"
+            >
+              <thead>
+                <tr>
+                  <th>Name & Details</th>
+                  <th>Items</th>
+                  <th>Followers</th>
+                  <th>Member Since</th>
+                  <th>Sales</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/1.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">Marco Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success"
+                      >154</a
+                    >
+                  </td>
+                  <td>
+                    <h6 class="text-dark fs-20 mb-0 mt-3 mt-md-0">76</h6>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >May 2017</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">786</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/2.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">Lisa Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-primary"
+                      >135</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">57</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >June 2017</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">686</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate1"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/3.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">
+                            Marshall Theme
+                          </h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-primary"
+                      >175</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">78</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >Aug 2018</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">986</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate2"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/4.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">
+                            Chapman Theme
+                          </h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-info">985</a>
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">88</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >Aug 2018</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">546</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate3"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/5.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">Robic Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success"
+                      >185</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">98</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >Sep 2018</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">386</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate4"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/1.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-1">
+                          <h4 class="font-weight-semibold mt-0">Jahno Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success"
+                      >765</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">87</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >Nov 2019</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">186</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate5"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/3.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-0">
+                          <h4 class="font-weight-semibold mt-0">Hymbo Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success"
+                      >455</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">27</h5>
+                  </td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="font-weight-bold fs-15 text-dark"
+                      >Nov 2019</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">346</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate6"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media mt-0">
+                      <div class="card-aside-img">
+                        <img
+                          src="./assets/images/png/5.png"
+                          alt="img"
+                          class="bg-light"
+                        />
+                      </div>
+                      <div class="media-body ms-3 logo-content">
+                        <div class="ms-3 mt-0">
+                          <h4 class="font-weight-semibold mt-0">Cmaho Theme</h4>
+                          <div class="author-user">
+                            <img src="./assets/images/png/10.png" alt="img" />
+                            <img src="./assets/images/png/11.png" alt="img" />
+                            <img src="./assets/images/png/12.png" alt="img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success"
+                      >955</a
+                    >
+                  </td>
+                  <td>
+                    <h5 class="text-dark fs-20 mb-0 mt-3 mt-md-0">78</h5>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0);" class="font-weight-bold fs-15"
+                      >Jan 2019</a
+                    >
+                  </td>
+                  <td>
+                    <div class="text-lg-center mt-3 mt-md-0">
+                      <h4 class="text-dark fs-20 mb-0 mt-3 mt-md-0">766</h4>
+                      <span class="text-muted fs-13">Sales</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating-stars block">
+                      <input
+                        type="number"
+                        readonly="readonly"
+                        class="rating-value star"
+                        name="rating-stars-value"
+                        value="4"
+                      />
+                      <div class="d-inline-flex">
+                        <ngb-rating
+                          class="text-warning"
+                          [(rate)]="currentRate7"
+                          [max]="5"
+                        ></ngb-rating>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <ul class="pagination mb-0 justify-content-end">
+          <li class="page-item page-prev disabled">
+            <a class="page-link" href="javascript:void(0);" tabindex="-1"
+              >Prev</a
+            >
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="javascript:void(0);">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">5</a>
+          </li>
+          <li class="page-item page-next">
+            <a class="page-link" href="javascript:void(0);">Next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Userall-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

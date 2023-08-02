@@ -1,0 +1,2021 @@
+<app-bannering1
+  [title]="navitem"
+  [items]="['Pages', 'My Dashboard']"
+></app-bannering1>
+<!--User Dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="hor-menu-nav">
+          <nav class="navbar-expand-lg navbar-light">
+            <button (click)="mobileNav =! mobileNav"
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Dashboard-Menu<i class="fe fe-align-left"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{
+              'show' : mobileNav
+          }">
+              <ul ngbNav #nav="ngbNav" class="navbar-nav" (navChange)="onNavChange($event)">
+                <li [ngbNavItem]="'Edit Profile'" [ngClass]="{'active': activeTab === 'home'}" (click)="activeTab = 'home';" class="nav-item border-left-0" navChange>
+                  <a ngbNavLink class="nav-link"
+                    ><i class="fe fe-user nav-icon"></i> Edit Profile</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="card mb-0">
+                      <div class="card-header">
+                        <h3 class="card-title">Edit Profile</h3>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">First Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="First Name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Last Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Last Name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Email address</label>
+                              <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Email"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Phone Number</label>
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="Number"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="form-label">Address</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Home Address"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-group">
+                              <label class="form-label">City</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="City"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-group">
+                              <label class="form-label">Postal Code</label>
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="ZIP Code"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="form-group">
+                              <label class="form-label">Country</label>
+                              <ng-select [searchable]="false" [clearable]="false"
+                                class="select2-show-search border-bottom-0 w-100"
+                                placeholder="--Select--"
+                              >
+                                <ng-optgroup label="Categories">
+                                  <ng-option value="1">Germany</ng-option>
+                                  <ng-option value="2">Real Estate</ng-option>
+                                  <ng-option value="3">Canada</ng-option>
+                                  <ng-option value="4">Usa</ng-option>
+                                  <ng-option value="5">Afghanistan</ng-option>
+                                  <ng-option value="6">Albania</ng-option>
+                                  <ng-option value="7">China</ng-option>
+                                  <ng-option value="8">Denmark</ng-option>
+                                  <ng-option value="9">Finland</ng-option>
+                                  <ng-option value="10">India</ng-option>
+                                  <ng-option value="11">Kiribati</ng-option>
+                                  <ng-option value="12">Kuwait</ng-option>
+                                  <ng-option value="13">Mexico</ng-option>
+                                  <ng-option value="14">Pakistan</ng-option>
+                                </ng-optgroup>
+                              </ng-select>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Facebook</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="https://www.facebook.com/"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Google</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="https://www.google.com/"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Twitter</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="https://twitter.com/"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label">Pinterest</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="https://in.pinterest.com/"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="form-label">About Me</label>
+                              <textarea
+                                rows="5"
+                                class="form-control"
+                                placeholder="Enter About your description"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group mb-0">
+                              <label class="form-label">Upload Image</label>
+                              <ngx-dropzone (change)="onSelect($event)">
+                                <ngx-dropzone-label
+                                  >Upload Image Here</ngx-dropzone-label
+                                >
+                                <ngx-dropzone-preview
+                                  *ngFor="let f of files"
+                                  [removable]="true"
+                                  (removed)="onRemove(f)"
+                                >
+                                  <ngx-dropzone-label
+                                    >{{ f.name }} ({{
+                                      f.type
+                                    }})</ngx-dropzone-label
+                                  >
+                                </ngx-dropzone-preview>
+                              </ngx-dropzone>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button type="submit" class="btn ripple btn-secondary">
+                          Updated Profile
+                        </button>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Upload Items'" [ngClass]="{'active': activeTab === 'home1'}" (click)="activeTab = 'home1';" class="nav-item">
+                  <a ngbNavLink class="nav-link"
+                    ><i class="fe fe-download nav-icon"></i> Upload Items</a>
+                  <ng-template ngbNavContent>
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Upload Items</h3>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-12">
+                            <div class="form-group">
+                              <ng-select [searchable]="false" [clearable]="false"
+                                name="country"
+                                id="select-countries"
+                                class=" select2-show-search select2-hidden-accessible"
+                                data-select2-id="select-countries"
+                                placeholder="Search Categories"
+                                tabindex="-1"
+                                aria-hidden="true"
+                              >
+                                <ng-option
+                                  value="1"
+                                  selected=""
+                                  data-select2-id="11"
+                                >
+                                </ng-option>
+                                <ng-option value="2" data-select2-id="15">
+                                  HTML
+                                </ng-option>
+                                <ng-option value="3" data-select2-id="16">
+                                  Wordpress
+                                </ng-option>
+                                <ng-option value="4" data-select2-id="17">
+                                  Angular
+                                </ng-option>
+                                <ng-option value="5" data-select2-id="18">
+                                  PHP
+                                </ng-option>
+                                <ng-option value="7" data-select2-id="19">
+                                  PSD
+                                </ng-option>
+                                <ng-option value="8" data-select2-id="20">
+                                  Plugins
+                                </ng-option>
+                                </ng-select>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <div class="form-group">
+                              <label class="form-label">Item Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="form-label">Description</label>
+                              <textarea
+                                rows="5"
+                                class="form-control"
+                                placeholder="Enter your description"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="form-label">Upload Image</label>
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  name="example-file-input-custom"
+                                />
+                                <label class="custom-file-label"
+                                  >Choose file</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="">
+                              <div class="form-group">
+                                <label class="form-label text-dark"
+                                  >Image1</label
+                                >
+                                <ng-select [searchable]="false" ngModel="Image1" [clearable]="false"
+                                name="country"
+                                id="select-countries"
+                                class=" select2-show-search select2-hidden-accessible"
+                                data-select2-id="select-countries"
+                                placeholder="Search Categories"
+                                tabindex="-1"
+                                aria-hidden="true">
+                                <ng-option value="2" data-select2-id="15">
+                                  Image1
+                                </ng-option>
+                                </ng-select>
+
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label text-dark"
+                                  >Image2</label
+                                >
+                                <ng-select [searchable]="false" ngModel="Image2" [clearable]="false"
+                                name="country"
+                                id="select-countries"
+                                class=" select2-show-search select2-hidden-accessible"
+                                data-select2-id="select-countries"
+                                placeholder="Search Categories"
+                                tabindex="-1"
+                                aria-hidden="true">
+                                <ng-option value="2" data-select2-id="15">
+                                  Image2
+                                </ng-option>
+                                </ng-select>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label"
+                                >File Included<span class="text-danger"
+                                  >*</span
+                                ></label
+                              >
+                              <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter here"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label class="form-label"
+                                >Item Dimensions<span class="text-danger"
+                                  >*</span
+                                ></label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="Enter Dimensions"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="form-label"
+                                >Tags<span class="text-danger">*</span></label
+                              >
+                              <textarea
+                                rows="3"
+                                class="form-control"
+                                placeholder="Enter Item tags..."
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <label class="form-label">Item Theme:</label>
+                                </div>
+                                <div class="col-md-9">
+
+                                  <ng-select [searchable]="false" [clearable]="false"
+                                name="country"
+                                id="select-countries"
+                                class=" select2-show-search select2-hidden-accessible"
+                                data-select2-id="select-countries"
+                                placeholder="Search Categories"
+                                tabindex="-1"
+                                aria-hidden="true"
+                              >
+                                <ng-option value="2" data-select2-id="15">
+                                  Default Theme
+                                </ng-option>
+                                <ng-option value="3" data-select2-id="16">
+                                  Light Theme
+                                </ng-option>
+                                <ng-option value="4" data-select2-id="17">
+                                  Dark Theme
+                                </ng-option>
+                                <ng-option value="5" data-select2-id="18">
+                                  Sidebar light Theme
+                                </ng-option>
+                                <ng-option value="7" data-select2-id="19">
+                                  Sidebar Dark Theme
+                                </ng-option>
+                                <ng-option value="8" data-select2-id="20">
+                                  RTL
+                                </ng-option>
+                                </ng-select>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <label class="form-label" id="inputEmail4">Color Theme:</label
+                                  >
+                                </div>
+                                <div class="col-md-9">
+                                  <div class="custom-controls-stacked d-flex">
+                                    <label
+                                      class="custom-control custom-radio me-4"
+                                    >
+                                      <input
+                                        type="radio"
+                                        class="custom-control-input"
+                                        name="example-radios"
+                                        value="option1"
+                                        checked=""
+                                      />
+                                      <span class="custom-control-label"
+                                        >Light</span
+                                      >
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                      <input
+                                        type="radio"
+                                        class="custom-control-input"
+                                        name="example-radios"
+                                        value="option2"
+                                      />
+                                      <span class="custom-control-label"
+                                        >Dark</span
+                                      >
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group mb-0">
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <label class="form-label"
+                                    >Responsive Layout:</label
+                                  >
+                                </div>
+                                <div class="col-md-9">
+                                  <label class="form-switch ps-0">
+                                    <input
+                                      type="checkbox"
+                                      name="form-switch-checkbox"
+                                      class="form-switch-input"
+                                    />
+                                    <span class="form-switch-indicator"></span>
+                                    <span class="form-switch-description"
+                                      >On/Off</span
+                                    >
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-end">
+                        <div class="btn-list">
+                          <button type="submit" class="btn ripple btn-primary">
+                            Submit
+                          </button>
+                          <button
+                            type="submit" 
+                            class="btn ripple btn-secondary"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Managed Items'" [ngClass]="{'active': activeTab === 'home2'}" (click)="activeTab = 'home2';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="manged1.html"
+                    ><i class="fe fe-folder-plus nav-icon"></i>Managed Items</a
+                  >
+                  <ng-template ngbNavContent>
+                    <app-table1></app-table1>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Purchase'" [ngClass]="{'active': activeTab === 'home3'}" (click)="activeTab = 'home3';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="purchase.html"
+                    ><i class="fe fe-shopping-cart nav-icon"></i>Purchase</a
+                  >
+                  <ng-template ngbNavContent>
+                    <app-table1></app-table1>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Credits'" [ngClass]="{'active': activeTab === 'home4'}" (click)="activeTab = 'home4';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="credits.html"
+                    ><i class="fe fe-credit-card nav-icon"></i>Credits</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="row">
+                      <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <div class="card-title">Small</div>
+                                <div class="h2 mb-0 fs-40">$10</div>
+                                <div class="text-center mt-6">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-light btn-block"
+                                    >Choose plan</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <div class="card-title">Medium</div>
+                                <div class="h2 mb-0 fs-40">$20</div>
+                                <div class="text-center mt-6">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-light btn-block"
+                                    >Choose plan</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <div class="card-title">Big</div>
+                                <div class="h2 mb-0 fs-40">$50</div>
+                                <div class="text-center mt-6">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-light btn-block"
+                                    >Choose plan</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <div class="card-title">Premium</div>
+                                <div class="h2 mb-0 fs-40">$100</div>
+                                <div class="text-center mt-6">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-light btn-block"
+                                    >Choose plan</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <div class="card-title">Diamond</div>
+                                <div class="h2 mb-0 fs-40">$500</div>
+                                <div class="text-center mt-6">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-light btn-block"
+                                    >Choose plan</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-0">
+                          <div class="card-header">
+                            <h3 class="card-title">
+                              Payment Method &amp; Confirmation
+                            </h3>
+                          </div>
+                          <div class="card-body">
+                            <div class="card-pay">
+                              <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                                <li [ngbNavItem]="1" class="">
+                                  <a
+                                    ngbNavLink
+                                    href="#tab1"
+                                    class=""
+                                    data-bs-toggle="tab"
+                                    ><i class="fa fa-credit-card"></i> Credit
+                                    Card</a
+                                  >
+                                  <ng-template ngbNavContent>
+                                    <div class="tab-pane active show" id="tab1">
+                                      <div class="form-group">
+                                        <label class="form-label"
+                                          >CardHolder Name</label
+                                        >
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="name1"
+                                          placeholder="First Name"
+                                        />
+                                      </div>
+                                      <div class="form-group">
+                                        <label class="form-label"
+                                          >Card number</label
+                                        >
+                                        <div class="input-group">
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Search for..."
+                                          />
+                                          <span class="">
+                                            <button
+                                              class="btn ripple btn-info"
+                                              type="button"
+                                            >
+                                              <i class="fa fa-cc-visa"></i> &nbsp;
+                                              <i class="fa fa-cc-amex"></i> &nbsp;
+                                              <i class="fa fa-cc-mastercard"></i>
+                                            </button>
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-8">
+                                          <div class="form-group">
+                                            <label class="form-label"
+                                              >Expiration</label
+                                            >
+                                            <div class="input-group">
+                                              <input
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="MM"
+                                                name="expire-month"
+                                              />
+                                              <input
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="YY"
+                                                name="expire-year"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label class="form-label"
+                                              >CVV
+                                              <i class="fa fa-question-circle"></i
+                                            ></label>
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              required=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary my-1"
+                                        >Submit</a
+                                      >
+                                    </div>
+                                  </ng-template>
+                                </li>
+                                <li [ngbNavItem]="2">
+                                  <a ngbNavLink data-bs-toggle="tab" class=""
+                                    ><i class="fa fa-paypal"></i> Paypal</a
+                                  >
+                                  <ng-template ngbNavContent>
+                                    <div class="tab-pane active show" id="tab2" role="tabpanel"> <h6 class="font-weight-semibold">Paypal is easiest way to pay online</h6> <p><a href="javascript:void(0);" class="btn ripple  btn-secondary"><i class="fa fa-paypal"></i> Log in my Paypal</a></p><p class="mb-0"><strong>Note:</strong> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p></div>
+                                  </ng-template>
+                                </li>
+                                <li [ngbNavItem]="3">
+                                  <a
+                                    ngbNavLink
+                                    href="#tab3"
+                                    data-bs-toggle="tab"
+                                    class=""
+                                    ><i class="fa fa-university"></i> Bank
+                                    Transfer</a
+                                  >
+                                  <ng-template ngbNavContent>
+                                    <div class="tab-pane" id="tab3">
+                                      <h6 class="font-weight-semibold">
+                                        Bank account details
+                                      </h6>
+                                      <dl class="card-text">
+                                        <dt>BANK:</dt>
+                                        <dd>THE UNION BANK 0456</dd>
+                                      </dl>
+                                      <dl class="card-text">
+                                        <dt>Account number:</dt>
+                                        <dd>67542897653214</dd>
+                                      </dl>
+                                      <dl class="card-text">
+                                        <dt>IBAN:</dt>
+                                        <dd>543218769</dd>
+                                      </dl>
+                                      <p class="mb-0">
+                                        <strong>Note:</strong> Nemo enim ipsam
+                                        voluptatem quia voluptas sit aspernatur
+                                        aut odit aut fugit, sed quia consequuntur
+                                        magni dolores eos qui ratione voluptatem
+                                        sequi nesciunt.
+                                      </p>
+                                    </div>
+                                  </ng-template>
+                                </li>
+                              </ul>
+                              <div class="tab-content" [ngbNavOutlet]="nav"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Statements'" [ngClass]="{'active': activeTab === 'home5'}" (click)="activeTab = 'home5';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="statements1.html"
+                    ><i class="fe fe-edit nav-icon"></i>Statements</a
+                  >
+                  <ng-template ngbNavContent class="">
+                    <div class="tab-pane active show card" >
+                    <div class="card-header">
+                      <h3 class="card-title">Statements List</h3>
+                    </div>
+                    <div class="table-responsive statement-card">
+                      <table
+                        class="table card-table table-vcenter text-nowrap border-bottom"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Order ID</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Author</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let data of Statamentdata">
+                            <td>
+                              <a
+                                routerLink="/pages/otherpages-1/invoice"
+                                class="text-primary"
+                                >{{ data.id }}</a
+                              >
+                            </td>
+                            <td>{{ data.Category }}</td>
+                            <td>{{ data.Date }}</td>
+                            <td class="font-weight-semibold fs-16">
+                              {{ data.author }}
+                            </td>
+                            <td>
+                              <a
+                                href="javascript:void(0);"
+                                class="badge bg-success"
+                                >{{ data.type }}</a
+                              >
+                            </td>
+                            <td class="font-weight-semibold fs-18">
+                              {{ data.Price }}
+                            </td>
+                            <td>
+                              <a
+                                href="javascript:void(0);"
+                                class="badge bg-danger"
+                                >{{ data.Action }}</a
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="card-body">
+                      <ul class="pagination">
+                        <li class="page-item page-prev disabled">
+                          <a
+                            class="page-link"
+                            href="javascript:void(0);"
+                            tabindex="-1"
+                            >Prev</a
+                          >
+                        </li>
+                        <li class="page-item active">
+                          <a class="page-link" href="javascript:void(0);">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="javascript:void(0);">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="javascript:void(0);">3</a>
+                        </li>
+                        <li class="page-item page-next">
+                          <a class="page-link" href="javascript:void(0);"
+                            >Next</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Settings'" [ngClass]="{'active': activeTab === 'home6'}" (click)="activeTab = 'home6';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="settings1.html"
+                    ><i class="fe fe-settings nav-icon"></i>Settings</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane active show card settings" >
+                    <div class="card-header">
+                      <h3 class="card-title">Settings</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="settings-tab">
+                        <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                          <li [ngbNavItem]="1" class="">
+                            <a ngbNavLink class="" data-bs-toggle="tab"
+                              ><i class="icon icon-speedometer"></i> General</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane active show " id="tab1">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label
+                                          class="form-label"
+                                          id="examplenameInputname2"
+                                          >Currency</label
+                                        >
+                                      </div>
+                                      <!-- <div class="col-md-9">
+                                        <ng-select
+                                          placeholder="Choose a Language..."
+                                          class="select2-show-search languages"
+                                        >
+                                          <ng-option value="0"
+                                            >Choose currency</ng-option
+                                          >
+                                          <ng-option value="1">USD</ng-option>
+                                          <ng-option value="2">INR</ng-option>
+                                          <ng-option value="3">EUR</ng-option>
+                                          <ng-option value="4">GBP</ng-option>
+                                        </ng-select>
+                                      </div> -->
+                                      <div class="col-md-9">
+                                        <ng-select [searchable]="false" [clearable]="false"
+                                          placeholder="Choose a Language..."
+                                          class="select2-show-search languages">
+                                          <ng-option value="0">Choose Currency</ng-option>
+                                          <ng-option value="1">INR</ng-option>
+                                          <ng-option value="2">USD</ng-option>
+                                          <ng-option value="3">EUR</ng-option>
+                                          <ng-option value="4">GBP</ng-option>
+                                        </ng-select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label
+                                          class="form-label"
+                                          id="examplenameInputname3"
+                                          >Langague:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <ng-select [searchable]="false" [clearable]="false"
+                                          placeholder="Choose a Language..."
+                                          class="select2-show-search languages my-custom-settings"
+                                        >
+                                          <ng-option value="AF"
+                                            >Afrikanns</ng-option
+                                          >
+                                          <ng-option value="SQ"
+                                            >Albanian</ng-option
+                                          >
+                                          <ng-option value="AR"
+                                            >Arabic</ng-option
+                                          >
+                                          <ng-option value="HY"
+                                            >Armenian</ng-option
+                                          >
+                                          <ng-option value="EU"
+                                            >Basque</ng-option
+                                          >
+                                          <ng-option value="BN"
+                                            >Bengali</ng-option
+                                          >
+                                          <ng-option value="BG"
+                                            >Bulgarian</ng-option
+                                          >
+                                          <ng-option value="CA"
+                                            >Catalan</ng-option
+                                          >
+                                        </ng-select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Phone Number:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <div
+                                          class="custom-controls-stacked d-md-flex"
+                                        >
+                                          <label
+                                            class="custom-control custom-radio me-4"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios3"
+                                              value="option1"
+                                              checked
+                                            />
+                                            <span class="custom-control-label"
+                                              >Visible to everyone</span
+                                            >
+                                          </label>
+                                          <label
+                                            class="custom-control custom-radio"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios3"
+                                              value="option2"
+                                            />
+                                            <span class="custom-control-label"
+                                              >Visible to only my
+                                              Customers</span
+                                            >
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-0">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label
+                                          class="form-label"
+                                          id="inputPassword5"
+                                          >Profile:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <div
+                                          class="custom-controls-stacked d-md-flex"
+                                        >
+                                          <label
+                                            class="custom-control custom-radio me-4"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios4"
+                                              value="option1"
+                                              checked
+                                            />
+                                            <span class="custom-control-label"
+                                              >Visible to everyone</span
+                                            >
+                                          </label>
+                                          <label
+                                            class="custom-control custom-radio"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios4"
+                                              value="option2"
+                                            />
+                                            <span class="custom-control-label"
+                                              >Visible to only my
+                                              Customers</span
+                                            >
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </ng-template>
+                          </li>
+                          <li [ngbNavItem]="2">
+                            <a ngbNavLink class=""
+                              ><i class="icon icon-bubble"></i> Chat</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane" id="tab2">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label"
+                                        >Font-size:</label
+                                      >
+                                    </div>
+                                    <div class="col-md-9">
+                                      <div
+                                        class="custom-controls-stacked d-sm-flex"
+                                      >
+                                        <label
+                                          class="custom-control custom-radio me-4"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios3"
+                                            value="option1"
+                                            checked
+                                          />
+                                          <span class="custom-control-label"
+                                            >Small</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="custom-control custom-radio me-4"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios3"
+                                            value="option2"
+                                          />
+                                          <span class="custom-control-label"
+                                            >Medium</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="custom-control custom-radio"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios3"
+                                            value="option2"
+                                          />
+                                          <span class="custom-control-label"
+                                            >Large</span
+                                          >
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label">Chat:</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                      <label class="form-switch ps-0">
+                                        <input
+                                          type="checkbox"
+                                          name="form-switch-checkbox"
+                                          class="form-switch-input"
+                                        />
+                                        <span
+                                          class="form-switch-indicator"
+                                        ></span>
+                                        <span class="form-switch-description"
+                                          >On/Off</span
+                                        >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label"
+                                        >Chat Type:</label
+                                      >
+                                    </div>
+                                    <div class="col-md-9">
+                                      <div
+                                        class="custom-controls-stacked d-md-flex"
+                                      >
+                                        <label
+                                          class="custom-control custom-radio me-4"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios4"
+                                            value="option1"
+                                            checked
+                                          />
+                                          <span class="custom-control-label"
+                                            >Public Chat</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="custom-control custom-radio"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios4"
+                                            value="option2"
+                                          />
+                                          <span class="custom-control-label"
+                                            >Private Chat</span
+                                          >
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label"
+                                        >Enable Email Notifications:</label
+                                      >
+                                    </div>
+                                    <div class="col-md-9">
+                                      <label class="form-switch ps-0">
+                                        <input
+                                          type="checkbox"
+                                          name="form-switch-checkbox"
+                                          class="form-switch-input"
+                                        />
+                                        <span
+                                          class="form-switch-indicator"
+                                        ></span>
+                                        <span class="form-switch-description"
+                                          >On/Off</span
+                                        >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label"
+                                        >Back Up Chat:</label
+                                      >
+                                    </div>
+                                    <div class="col-md-9">
+                                      <label class="form-switch ps-0">
+                                        <input
+                                          type="checkbox"
+                                          name="form-switch-checkbox"
+                                          class="form-switch-input"
+                                        />
+                                        <span
+                                          class="form-switch-indicator"
+                                        ></span>
+                                        <span class="form-switch-description"
+                                          >On/Off</span
+                                        >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group mb-0">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <label class="form-label"
+                                        >Delete Chat:</label
+                                      >
+                                    </div>
+                                    <div class="col-md-9">
+                                      <div
+                                        class="custom-controls-stacked d-md-flex"
+                                      >
+                                        <label
+                                          class="custom-control custom-radio me-4"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios5"
+                                            value="option1"
+                                            checked
+                                          />
+                                          <span class="custom-control-label"
+                                            >Delete Read Chat</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="custom-control custom-radio"
+                                        >
+                                          <input
+                                            type="radio"
+                                            class="custom-control-input"
+                                            name="example-radios5"
+                                            value="option2"
+                                          />
+                                          <span class="custom-control-label"
+                                            >Delete All</span
+                                          >
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </ng-template>
+                          </li>
+                          <li [ngbNavItem]="3">
+                            <a ngbNavLink class=""
+                              ><i class="icon icon-settings"></i> Advanced</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane" id="tab3">
+                                <form class="form-horizontal">
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Auto-Advance:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <label class="form-switch ps-0">
+                                          <input
+                                            type="checkbox"
+                                            name="form-switch-checkbox"
+                                            class="form-switch-input"
+                                          />
+                                          <span
+                                            class="form-switch-indicator"
+                                          ></span>
+                                          <span class="form-switch-description"
+                                            >Enable/Disable</span
+                                          >
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label
+                                          class="form-label"
+                                          id="inputEmail4"
+                                          >Color Theme:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <div
+                                          class="custom-controls-stacked d-flex"
+                                        >
+                                          <label
+                                            class="custom-control custom-radio me-4"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios"
+                                              value="option1"
+                                              checked
+                                            />
+                                            <span class="custom-control-label"
+                                              >Light</span
+                                            >
+                                          </label>
+                                          <label
+                                            class="custom-control custom-radio"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios"
+                                              value="option2"
+                                            />
+                                            <span class="custom-control-label"
+                                              >Dark</span
+                                            >
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Dashboard Theme:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <ng-select [searchable]="false" [clearable]="false"
+                                          placeholder="Choose a Language..."
+                                          class="w-100 select2 languages"
+                                        >
+                                          <ng-option value="1"
+                                            >Default Theme</ng-option
+                                          >
+                                          <ng-option value="2"
+                                            >Light Theme</ng-option
+                                          >
+                                          <ng-option value="3"
+                                            >Dark Theme</ng-option
+                                          >
+                                          <ng-option value="4"
+                                            >Sidebar light Theme</ng-option
+                                          >
+                                          <ng-option value="5"
+                                            >Sidebar Dark Theme</ng-option
+                                          >
+                                          <ng-option value="6">RTL</ng-option>
+                                        </ng-select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label
+                                          class="form-label"
+                                          id="inputEmail5"
+                                          >Posted ADs:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <div
+                                          class="custom-controls-stacked d-md-flex"
+                                        >
+                                          <label
+                                            class="custom-control custom-radio me-4"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios1"
+                                              value="option1"
+                                              checked
+                                            />
+                                            <span class="custom-control-label"
+                                              >Directly</span
+                                            >
+                                          </label>
+                                          <label
+                                            class="custom-control custom-radio"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios1"
+                                              value="option2"
+                                            />
+                                            <span class="custom-control-label"
+                                              >By Admin Conformation</span
+                                            >
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Comments Visible:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <div
+                                          class="custom-controls-stacked d-md-flex"
+                                        >
+                                          <label
+                                            class="custom-control custom-radio me-4"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios2"
+                                              value="option1"
+                                              checked
+                                            />
+                                            <span class="custom-control-label"
+                                              >Directly</span
+                                            >
+                                          </label>
+                                          <label
+                                            class="custom-control custom-radio"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="example-radios2"
+                                              value="option2"
+                                            />
+                                            <span class="custom-control-label"
+                                              >By Admin Conformation</span
+                                            >
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >System Notification:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <label
+                                          class="form-switch d-inline-block me-5 ps-0"
+                                        >
+                                          <input
+                                            type="checkbox"
+                                            name="form-switch-checkbox"
+                                            class="form-switch-input"
+                                          />
+                                          <span
+                                            class="form-switch-indicator"
+                                          ></span>
+                                          <span class="form-switch-description"
+                                            >On/Off</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="form-switch d-inline-block"
+                                          ><a
+                                            href="javascript:void(0);"
+                                            class="btn ripple -link"
+                                            >Itemsd Another Settings</a
+                                          ></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Mail Notification:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <label
+                                          class="form-switch d-inline-block me-5 ps-0"
+                                        >
+                                          <input
+                                            type="checkbox"
+                                            name="form-switch-checkbox"
+                                            class="form-switch-input"
+                                          />
+                                          <span
+                                            class="form-switch-indicator"
+                                          ></span>
+                                          <span class="form-switch-description"
+                                            >On/Off</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="form-switch d-inline-block"
+                                          ><a
+                                            href="javascript:void(0);"
+                                            class="btn ripple -link"
+                                            >Itemsd Another Settings</a
+                                          ></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-0">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <label class="form-label"
+                                          >Auto Watch Comments:</label
+                                        >
+                                      </div>
+                                      <div class="col-md-9">
+                                        <label
+                                          class="form-switch d-inline-block me-5 ps-0"
+                                        >
+                                          <input
+                                            type="checkbox"
+                                            name="form-switch-checkbox"
+                                            class="form-switch-input"
+                                          />
+                                          <span
+                                            class="form-switch-indicator"
+                                          ></span>
+                                          <span class="form-switch-description"
+                                            >On/Off</span
+                                          >
+                                        </label>
+                                        <label
+                                          class="form-switch d-inline-block"
+                                          ><a
+                                            href="javascript:void(0);"
+                                            class="btn ripple -link"
+                                            >Itemsd Another Settings</a
+                                          ></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </ng-template>
+                          </li>
+                        </ul>
+                        <div class="tab-content" [ngbNavOutlet]="nav"></div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a
+                        href="javascript:void(0);"
+                        class="btn ripple btn-primary me-1"
+                        >Save Changes</a
+                      >
+                      <a
+                        href="javascript:void(0);"
+                        class="btn ripple btn-secondary me-1"
+                        >Cancel</a
+                      >
+                    </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="'Withdrawals'" [ngClass]="{'active': activeTab === 'home7'}" (click)="activeTab = 'home7';" class="nav-item">
+                  <a ngbNavLink class="nav-link" href="widthdrawals.html"
+                    ><i class="fe fe-edit nav-icon"></i>Withdrawals</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane active show card" >
+                    <div class="card-header">
+                      <h3 class="card-title">
+                        Payment Method &amp; Confirmation
+                      </h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-pay">
+                        <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                          <li [ngbNavItem]="1" class="">
+                            <a
+                              ngbNavLink
+                              href="#tab1"
+                              class=""
+                              data-bs-toggle="tab"
+                              ><i class="fa fa-credit-card"></i> Credit Card</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane active show" id="tab1">
+                                <div class="form-group">
+                                  <label class="form-label"
+                                    >CardHolder Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name1"
+                                    placeholder="First Name"
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label">Card number</label>
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Search for..."
+                                    />
+                                    <span class="">
+                                      <button
+                                        class="btn ripple btn-info"
+                                        type="button"
+                                      >
+                                        <i class="fa fa-cc-visa"></i> &nbsp;
+                                        <i class="fa fa-cc-amex"></i> &nbsp;
+                                        <i class="fa fa-cc-mastercard"></i>
+                                      </button>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-8">
+                                    <div class="form-group">
+                                      <label class="form-label"
+                                        >Expiration</label
+                                      >
+                                      <div class="input-group">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder="MM"
+                                          name="expire-month"
+                                        />
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder="YY"
+                                          name="expire-year"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label class="form-label"
+                                        >CVV
+                                        <i class="fa fa-question-circle"></i
+                                      ></label>
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="btn ripple btn-primary mb-3"
+                                  >Submit</a
+                                >
+                              </div>
+                            </ng-template>
+                          </li>
+                          <li [ngbNavItem]="2">
+                            <a ngbNavLink data-bs-toggle="tab" class=""
+                              ><i class="fa fa-paypal"></i> Paypal</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane" id="tab2">
+                                <h6 class="font-weight-semibold">
+                                  Paypal is easiest way to pay online
+                                </h6>
+                                <p>
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary"
+                                    ><i class="fa fa-paypal"></i> Log in my
+                                    Paypal</a
+                                  >
+                                </p>
+                                <p class="mb-0">
+                                  <strong>Note:</strong> Nemo enim ipsam
+                                  voluptatem quia voluptas sit aspernatur aut
+                                  odit aut fugit, sed quia consequuntur magni
+                                  dolores eos qui ratione voluptatem sequi
+                                  nesciunt.
+                                </p>
+                              </div>
+                            </ng-template>
+                          </li>
+                          <li [ngbNavItem]="3">
+                            <a
+                              ngbNavLink
+                              href="#tab3"
+                              data-bs-toggle="tab"
+                              class=""
+                              ><i class="fa fa-university"></i> Bank Transfer</a
+                            >
+                            <ng-template ngbNavContent>
+                              <div class="tab-pane" id="tab3">
+                                <h6 class="font-weight-semibold">
+                                  Bank account details
+                                </h6>
+                                <dl class="card-text">
+                                  <dt>BANK:</dt>
+                                  <dd>THE UNION BANK 0456</dd>
+                                </dl>
+                                <dl class="card-text">
+                                  <dt>Accaunt number:</dt>
+                                  <dd>67542897653214</dd>
+                                </dl>
+                                <dl class="card-text">
+                                  <dt>IBAN:</dt>
+                                  <dd>543218769</dd>
+                                </dl>
+                                <p class="mb-0">
+                                  <strong>Note:</strong> Nemo enim ipsam
+                                  voluptatem quia voluptas sit aspernatur aut
+                                  odit aut fugit, sed quia consequuntur magni
+                                  dolores eos qui ratione voluptatem sequi
+                                  nesciunt.
+                                </p>
+                              </div>
+                            </ng-template>
+                          </li>
+                        </ul>
+                        <div class="tab-content" [ngbNavOutlet]="nav"></div>
+                        <div class="tab-content">
+                          <div
+                            class="tab-pane active show"
+                            id="tab1"
+                            role="tabpanel"
+                          >
+                            <div class="form-group">
+                              <label class="form-label">CardHolder Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="name1"
+                                placeholder="First Name"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label class="form-label">Card number</label>
+                              <div class="input-group">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Search for..."
+                                />
+                                <span class="">
+                                  <button
+                                    class="btn ripple btn-info"
+                                    type="button"
+                                  >
+                                    <i class="fa fa-cc-visa"></i> &nbsp;
+                                    <i class="fa fa-cc-amex"></i> &nbsp;
+                                    <i class="fa fa-cc-mastercard"></i>
+                                  </button>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-8">
+                                <div class="form-group">
+                                  <label class="form-label">Expiration</label>
+                                  <div class="input-group">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      placeholder="MM"
+                                      name="expire-month"
+                                    />
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      placeholder="YY"
+                                      name="expire-year"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label class="form-label"
+                                    >CVV <i class="fa fa-question-circle"></i
+                                  ></label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="javascript:void(0);"
+                              class="btn ripple btn-secondary"
+                              >Submit</a
+                            >
+                          </div>
+                          <div class="tab-pane" id="tab2" role="tabpanel">
+                            <h6 class="font-weight-semibold">
+                              Paypal is easiest way to pay online
+                            </h6>
+                            <p>
+                              <a
+                                href="javascript:void(0);"
+                                class="btn ripple btn-secondary"
+                                ><i class="fa fa-paypal"></i> Log in my
+                                Paypal</a
+                              >
+                            </p>
+                            <p class="mb-0">
+                              <strong>Note:</strong> Nemo enim ipsam voluptatem
+                              quia voluptas sit aspernatur aut odit aut fugit,
+                              sed quia consequuntur magni dolores eos qui
+                              ratione voluptatem sequi nesciunt.
+                            </p>
+                          </div>
+                          <div class="tab-pane" id="tab3" role="tabpanel">
+                            <h6 class="font-weight-semibold">
+                              Bank account details
+                            </h6>
+                            <dl class="card-text">
+                              <dt>BANK:</dt>
+                              <dd>THE UNION BANK 0456</dd>
+                            </dl>
+                            <dl class="card-text">
+                              <dt>Accaunt number:</dt>
+                              <dd>67542897653214</dd>
+                            </dl>
+                            <dl class="card-text">
+                              <dt>IBAN:</dt>
+                              <dd>543218769</dd>
+                            </dl>
+                            <p class="mb-0">
+                              <strong>Note:</strong> Nemo enim ipsam voluptatem
+                              quia voluptas sit aspernatur aut odit aut fugit,
+                              sed quia consequuntur magni dolores eos qui
+                              ratione voluptatem sequi nesciunt.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title">Widthdrawals History</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table class="table table-bordered text-nowrap">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Category</th>
+                                  <th>Date</th>
+                                  <th>Price</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>#348</td>
+                                  <td>HTML Template</td>
+                                  <td>07-12-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $18
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-primary btn-sm text-white"
+                                      >Pending</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#186</td>
+                                  <td>Listing Template</td>
+                                  <td>02-12-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $14,276
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-success btn-sm text-white mb-1"
+                                      >Paid</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#831</td>
+                                  <td>Busniess Template</td>
+                                  <td>30-11-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $25,000
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-primary btn-sm text-white"
+                                      >Pending</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#672</td>
+                                  <td>Corporate Template</td>
+                                  <td>25-18-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $50.00
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-success btn-sm text-white"
+                                      >Paid</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#428</td>
+                                  <td>Spa Template</td>
+                                  <td>24-11-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $99.99
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-success btn-sm text-white"
+                                      >Paid</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#543</td>
+                                  <td>Wordpress Template</td>
+                                  <td>22-11-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $145
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-primary btn-sm text-white"
+                                      >Pending</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>#986</td>
+                                  <td>Angular Template</td>
+                                  <td>18-11-2019</td>
+                                  <td class="font-weight-semibold fs-16">
+                                    $378
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="btn ripple btn-success btn-sm text-white"
+                                      >Paid</a
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <ul class="pagination">
+                            <li class="page-item page-prev disabled">
+                              <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                tabindex="-1"
+                                >Prev</a
+                              >
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="javascript:void(0);"
+                                >1</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);"
+                                >2</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="javascript:void(0);"
+                                >3</a
+                              >
+                            </li>
+                            <li class="page-item page-next">
+                              <a class="page-link" href="javascript:void(0);"
+                                >Next</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/custom-pages/login"
+                    ><i class="fe fe-power nav-icon"></i>Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+  </div>
+</section>
+<!--User Dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

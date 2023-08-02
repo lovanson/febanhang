@@ -1,0 +1,188 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">My Dashboard</h3>
+  </div>
+  <div class="card-body text-center item-user">
+    <div class="profile-pic">
+      <div class="profile-pic-img mb-4">
+        <span
+          class="bg-success dots"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="online"
+        ></span>
+        <img
+          src="./assets/images/users/male/2.jpg"
+          class="brround"
+          alt="user"
+        />
+      </div>
+      <a routerLink="/pages/user-pages/user-profile" class="text-dark"
+        ><h4 class="mt-3 mb-0 font-weight-semibold">Jacob Smith</h4></a
+      >
+    </div>
+  </div>
+  <aside class="app-sidebar doc-sidebar my-dash">
+    <div class="app-sidebar__user clearfix">
+      <ul class="side-menu">
+        <li>
+          <a class="side-menu__item" routerLink="/pages/user-pages/my-dashboard" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-user"></i
+            ><span class="side-menu__label">Edit Profile</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/user-pages/my-ads" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-codepen"></i
+            ><span class="side-menu__label">My Items</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/user-pages/favourite-ads" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-heart"></i
+            ><span class="side-menu__label">My Favorite</span></a
+          >
+        </li>
+        <li class="slide {{expande ? 'is-expanded' : ''}}" >
+          <a (click)="expande = !expande" routerLinkActive="active"
+            class="side-menu__item"
+            data-bs-toggle="slide"
+            href="javascript:void(0);"
+            ><i class="side-menu__icon fe fe-folder-plus"></i
+            ><span class="side-menu__label">Managed Items</span
+            ><i class="angle fa fa-angle-right"></i
+          ></a>
+          <ul class="slide-menu">
+            <li>
+              <a class="slide-item" routerLink="/pages/user-pages/managed-ads" routerLinkActive="active"
+                ><i class="fa fa-caret-right me-2 text-muted"></i> Managed
+                Items</a
+              >
+            </li>
+            <li class="sub-slide {{expande1 ? 'is-expanded' : ''}}">
+              <a (click)="expande1 = ! expande1" routerLinkActive="active"
+                class="side-menu__item border-top-0 slide-item"
+                href="javascript:void(0);"
+                data-bs-toggle="sub-slide"
+                ><span class="side-menu__label"
+                  ><i class="fa fa-caret-right me-2 text-muted"></i>
+                  Submenu</span
+                >
+                <i class="sub-angle fa fa-angle-right"></i
+              ></a>
+              <ul class="child-sub-menu">
+                <li>
+                  <a class="slide-item" href="javascript:void(0);"
+                    ><i class="fa fa-caret-right me-2 text-muted"></i> Level
+                    1</a
+                  >
+                </li>
+                <li>
+                  <a class="slide-item" href="javascript:void(0);"
+                    ><i class="fa fa-caret-right me-2 text-muted"></i> Level
+                    2</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/user-pages/payments" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-credit-card"></i
+            ><span class="side-menu__label">Payments</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/otherpages-3/orders" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-shopping-cart"></i
+            ><span class="side-menu__label">Orders</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/otherpages-3/statements" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-edit"></i
+            ><span class="side-menu__label">Statements</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/otherpages-3/tips" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-compass"></i
+            ><span class="side-menu__label"> Safety Tips</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/pages/otherpages-3/settings" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-settings"></i
+            ><span class="side-menu__label">Settings</span></a
+          >
+        </li>
+        <li>
+          <a class="side-menu__item" routerLink="/custom-pages/login" routerLinkActive="active"
+            ><i class="side-menu__icon fe fe-power"></i
+            ><span class="side-menu__label">Logout</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<div class="card my-select">
+  <div class="card-header">
+    <h3 class="card-title">Search Categories</h3>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="text"
+        placeholder="What are you looking for?"
+      />
+    </div>
+    <div class="form-group">
+      <ng-select [searchable]="false" [clearable]="false"
+        name="country"
+        id="select-countries"
+        class="select2-show-search"
+        placeholder="All Categories"
+      >
+        <ng-option value="2">HTML</ng-option>
+        <ng-option value="3">Wordpress</ng-option>
+        <ng-option value="4">Angular</ng-option>
+        <ng-option value="5">PHP</ng-option>
+        <ng-option value="7">PSD</ng-option>
+        <ng-option value="8">Plugins</ng-option>
+      </ng-select>
+    </div>
+    <div class="">
+      <a href="javascript:void(0);" class="btn ripple btn-block btn-primary"
+        >Search</a
+      >
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Safety Tips For Buyers</h3>
+  </div>
+  <div class="card-body">
+    <ul class="list-unstyled widget-spec mb-0">
+      <li class="">
+        <i class="fa fa-check text-success" aria-hidden="true"></i> Meet Seller
+        at public Place
+      </li>
+      <li class="">
+        <i class="fa fa-check text-success" aria-hidden="true"></i>
+        Check item before you buy
+      </li>
+      <li class="">
+        <i class="fa fa-check text-success" aria-hidden="true"></i> Pay only
+        after collecting item
+      </li>
+      <li class="ms-5 mb-0">
+        <a routerLink="/pages/otherpages-3/tips"> View more..</a>
+      </li>
+    </ul>
+  </div>
+</div>

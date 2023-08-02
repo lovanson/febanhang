@@ -1,0 +1,87 @@
+<div *ngIf="acceptcookies" id="gdpr-cookie-message">
+  <h4>Accept Cookies &amp; Privacy Policy?</h4>
+  <p>
+    There are no cookies used on this site, but if there were this message could
+    be customised to provide more details. Click the
+    <strong>accept</strong> button below to see the optional callback in
+    action... <a href="#privacy">More information</a>
+  </p>
+  <div>
+    <div
+      #collapse="ngbCollapse"
+      [(ngbCollapse)]="isCollapsed"
+      class="mg-t-5"
+      id="collapseExample"
+    >
+      <h5>Select cookies to accept</h5>
+      <ul>
+        <li>
+          <input
+            type="checkbox"
+            name="gdpr[]"
+            value="necessary"
+            checked="checked"
+            disabled="disabled"
+          />
+          <label
+            title="These are cookies that are essential for the website to work correctly."
+            >Necessary</label
+          >
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="gdpr-cookietype-preferences"
+            name="gdpr[]"
+            value="preferences"
+            data-auto="on"
+          />
+          <label
+            for="gdpr-cookietype-preferences"
+            title="These are cookies that are related to your site preferences, e.g. remembering your username, site colours, etc."
+            >Site Preferences</label
+          >
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="gdpr-cookietype-analytics"
+            name="gdpr[]"
+            value="analytics"
+            data-auto="on"
+          />
+          <label
+            for="gdpr-cookietype-analytics"
+            title="Cookies related to site visits, browser types, etc."
+            >Analytics</label
+          >
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="gdpr-cookietype-marketing"
+            name="gdpr[]"
+            value="marketing"
+            data-auto="on"
+          />
+          <label
+            for="gdpr-cookietype-marketing"
+            title="Cookies related to marketing, e.g. newsletters, social media, etc"
+            >Marketing</label
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button id="gdpr-cookie-accept" type="button" (click)="Acceptedcookies()">
+    Accept Cookies
+  </button>
+  <button
+    id="gdpr-cookie-advanced"
+    type="button"
+    (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed"
+  >
+    Customise Cookies
+  </button>
+</div>

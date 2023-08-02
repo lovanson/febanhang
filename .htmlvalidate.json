@@ -1,0 +1,20 @@
+{
+  "elements": ["html5"],
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "close-order": "error",
+    "no-implicit-close": "error",
+    "close-attr": "error",
+    "deprecated": "error",
+    "no-dup-attr": "error",
+    "no-dup-class": "error",
+    "no-dup-id": "error",
+    "no-style-tag": "warn",
+    "no-self-closing": "error",
+    "no-trailing-whitespace": "error",
+    "no-inline-style": "off",
+    "doctype-first": "off"
+ 
+  }
+}
+ 

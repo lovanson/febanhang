@@ -1,0 +1,39 @@
+<!--Itemsd lists-->
+
+						<div class="row blog-grid" >
+							<div class="col-xl-6 col-lg-12 col-md-12" *ngFor="let card of blogdata">
+								<div class="card" >
+									<div class="item7-card-img">
+										<a aria-label="img" routerLink="/blog/blog-details/blogdetails-left" ScrollTop></a>
+										<img [src]="card.src" alt="img" class="cover-image">
+									</div>
+									<div class="card-body">
+										<h4 class="fs-20"><a routerLink="/blog/blog-details/blogdetails-left" ScrollTop class="text-dark">{{card.title}}</a></h4>
+										<div class="item7-card-desc d-flex mt-2 mb-2">
+											<a href="javascript:void(0);" class="text-muted"><i class="fa fa-calendar-o me-2"></i>{{card.date}}</a>
+											<div class="ms-auto">
+												<a href="javascript:void(0);" class="text-muted me-0"><i class="fa fa-comment-o me-2"></i>{{card.comment}}</a>
+											</div>
+										</div>
+
+										<p class="fs-14">{{card.summary}}</p>
+										<a routerLink="/blog/blog-details/blogdetails-left" ScrollTop class="btn ripple btn-primary">{{card.btn}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="center-block text-center">
+							<ul class="pagination mb-lg-0 mb-5">
+								<li class="page-item page-prev disabled">
+									<a class="page-link" href="javascript:void(0);" tabindex="-1">Prev</a>
+								</li>
+								<li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+								<li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+								<li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+								<li class="page-item page-next">
+									<a class="page-link" href="javascript:void(0);">Next</a>
+								</li>
+							</ul>
+						</div>
+
+					<!--/Itemsd lists-->

@@ -1,0 +1,202 @@
+<div class="error-image construction-image1">
+  <div class="page page-h">
+    <div class="page-content z-index-10">
+      <div class="container text-center">
+        <section class="sptb">
+          <div class="container customerpage">
+            <div class="row">
+              <div class="single-page auth-page">
+
+                <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto authentication-login-page">
+                    <div class="login-option">
+                  <ul
+                    ngbNav
+                    #nav="ngbNav"
+                    [(activeId)]="active"
+                    class="nav-tabs"
+                  >
+                    <li ngbNavItem="Firebase">
+
+                      <a ngbNavLink>
+                        <img src="./assets/images/firebase.svg" alt="" />
+                      </a>
+                      <ng-template ngbNavContent>
+
+                    <div class="card-body p-0">
+                        <div class="card-body pb-4">
+                      <div class="btn-list d-flex">
+                        <a
+                          aria-label="google"
+                          href="https://www.google.com/gmail/"
+                          class="btn btn-google btn-block"
+                          ><i class="fa fa-google fa-1x me-2"></i> Google</a
+                        >
+                        <a
+                          aria-label="twitter"
+                          href="https://twitter.com/"
+                          class="btn btn-twitter"
+                          ><i class="fa fa-twitter fa-1x"></i
+                        ></a>
+                        <a
+                          aria-label="facebook"
+                          href="https://www.facebook.com/"
+                          class="btn btn-facebook me-0"
+                          ><i class="fa fa-facebook fa-1x"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <hr class="divider" />
+                    <form (ngSubmit)="login()" id="login" class="card-body">
+                      <div class="mail">
+                        <input
+                          type="email"
+                          name="mail"
+                          [(ngModel)]="email"
+                          placeholder="Enter email Id"
+                          required
+                        />
+                        <label>Mail or Username</label>
+                      </div>
+                      <div class="passwd mb-0">
+                        <input
+                          type="password"
+                          name="password"
+                          [(ngModel)]="password"
+                          placeholder="Enter Password"
+                          required
+                        />
+                        <label>Password</label>
+                      </div>
+
+                      <div class="submit">
+                        <button
+                          class="btn ripple btn-primary btn-block  {{
+                            disabled
+                          }}"
+                          href="javascript:void(0);"
+                        >
+                          Login
+                        </button>
+                      </div>
+                      <div class="form-group mt-2">
+                        <p *ngIf="errorMessage.length > 0" class="text-danger">
+                          {{ errorMessage }}
+                        </p>
+
+                        <p
+                          *ngIf="_error.message.length > 0"
+                          class="text-danger"
+                        >
+                          {{ _error.message }}
+                        </p>
+                      </div>
+                      <p class="mb-2">
+                        <a routerLink="/custom-pages/forgot-password"
+                          >Forgot Password</a
+                        >
+                      </p>
+                      <p class="text-dark mb-0">
+                        Don't have account?<a
+                          routerLink="/custom-pages/register"
+                          class="text-primary ms-1"
+                          >Sign UP</a
+                        >
+                      </p>
+                    </form>
+                    </div>
+
+                      </ng-template>
+                    </li>
+                   <li ngbNavItem="Angular">
+                      <a ngbNavLink>
+                        <img src="./favicon.ico" alt="" />
+                      </a>
+                      <ng-template ngbNavContent>
+                        <div class="card-body p-0">
+                          <div class="card-body pb-4">
+                        <div class="btn-list d-flex">
+                          <a
+                            aria-label="google"
+                            href="https://www.google.com/gmail/"
+                            class="btn btn-google btn-block"
+                            ><i class="fa fa-google fa-1x me-2"></i> Google</a
+                          >
+                          <a
+                            aria-label="twitter"
+                            href="https://twitter.com/"
+                            class="btn btn-twitter"
+                            ><i class="fa fa-twitter fa-1x"></i
+                          ></a>
+                          <a
+                            aria-label="facebook"
+                            href="https://www.facebook.com/"
+                            class="btn btn-facebook me-0"
+                            ><i class="fa fa-facebook fa-1x"></i
+                          ></a>
+                        </div>
+                      </div>
+                      <hr class="divider" />
+                      <form (ngSubmit)="Submit()" id="login" class="card-body">
+                        <div class="mail">
+                          <input
+                            type="email"
+                            name="mail"
+                            [(ngModel)]="email"
+                            placeholder="Enter email Id"
+                            required
+                          />
+                          <label>Mail or Username</label>
+                        </div>
+                        <div class="passwd mb-0">
+                          <input
+                            type="password"
+                            name="password"
+                            [(ngModel)]="password"
+                            placeholder="Enter Password"
+                            required
+                          />
+                          <label>Password</label>
+                        </div>
+
+                        <div class="submit">
+                          <button
+                            class="btn ripple btn-primary btn-block  {{
+                              disabled
+                            }}"
+                            href="javascript:void(0);"
+                          >
+                            Login
+                          </button>
+                        </div>
+                        <p class="mb-2">
+                          <a routerLink="/custom-pages/forgot-password"
+                            >Forgot Password</a
+                          >
+                        </p>
+                        <p class="text-dark mb-0">
+                          Don't have account?<a
+                            routerLink="/custom-pages/register"
+                            class="text-primary ms-1"
+                            >Sign UP</a
+                          >
+                        </p>
+                      </form>
+                      </div>
+                      </ng-template>
+                   </li>
+                      </ul>
+                </div>
+                  <div class="wrapper wrapper2">
+                    <div class="">
+                      <div [ngbNavOutlet]="nav"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

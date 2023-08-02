@@ -1,0 +1,139 @@
+	<!--Topbar-->
+				<div class="top-bar">
+					<div class="container">
+						<div class="row" id="centerlog">
+							<div class="col-xl-8 col-lg-8 col-sm-4 col-7" >
+								<div class="top-bar-left d-flex">
+									<div class="clearfix" id="leftlogo">
+										<ul class="socials">
+											<li>
+												<a class="social-icon text-dark" href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+											</li>
+											<li>
+												<a class="social-icon text-dark" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+											</li>
+											<li>
+												<a class="social-icon text-dark" href="javascript:void(0);"><i class="fa fa-linkedin"></i></a>
+											</li>
+											<li>
+												<a class="social-icon text-dark" href="javascript:void(0);"><i class="fa fa-google-plus"></i></a>
+											</li>
+										</ul>
+									</div>
+										<ul class="contact">
+
+											<li class="select-country dropdown" ngbDropdown>
+												<a href="javascript:void(0);" class="nav-link leading-none" ngbDropdownToggle>
+                          <span class="header-avatar1 d-flex align-items-center">
+                            <img src="./assets/images/flags/{{customeDropdown.flag}}" alt="img" class="me-2 country h-10">
+                            <span class="fs-13 ">{{customeDropdown.Dropdown}}</span>
+                          </span>
+                        </a>
+												<div ngbDropdownMenu class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+													<a ngbDropdownItem class="dropdown-item d-flex align-items-center" href="javascript:void(0);" (click)="customeDropdown.Dropdown = 'Germany'; customeDropdown.flag = 'ad.svg'">
+                            <img src="./assets/images/flags/ad.svg" alt="img" class="me-2 country  h-10">
+														Germany
+													</a>
+													<a ngbDropdownItem class="dropdown-item d-flex align-items-center" href="javascript:void(0);"  (click)="customeDropdown.Dropdown = 'Italy'; customeDropdown.flag = 'ae.svg'">
+                            <img src="./assets/images/flags/ae.svg" alt="img" class="me-2 country  h-10">
+														Italy
+													</a>
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item d-flex align-items-center"  (click)="customeDropdown.Dropdown = 'Russia'; customeDropdown.flag = 'af.svg'">
+                            <img src="./assets/images/flags/af.svg" alt="img" class="me-2 country  h-10">
+														Russia
+													</a>
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item d-flex align-items-center"   (click)="customeDropdown.Dropdown = 'Spain'; customeDropdown.flag = 'ag.svg'">
+                            <img src="./assets/images/flags/ag.svg" alt="img" class=" me-2 country  h-10">
+														Spain
+													</a>
+												</div>
+											</li>
+											<li class="dropdown" ngbDropdown>
+												<a href="javascript:void(0);" class="text-dark" data-bs-toggle="dropdown" ngbDropdownToggle><span> Language <i class="fa fa-caret-down text-muted"></i></span> </a>
+												<div ngbDropdownMenu class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item" >
+														English
+													</a>
+													<a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">
+														Arabic
+													</a>
+													<a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">
+														German
+													</a>
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item" >
+														Greek
+													</a>
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item" >
+														Spanish
+													</a>
+												</div>
+											</li>
+											<li class="dropdown" ngbDropdown>
+												<a href="javascript:void(0);" class="text-dark" data-bs-toggle="dropdown" ngbDropdownToggle><span>Currency <i class="fa fa-caret-down text-muted"></i></span></a>
+												<div ngbDropdownMenu class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item" >
+														USD
+													</a>
+													<a ngbDropdownItem class="dropdown-item" href="javascript:void(0);">
+														EUR
+													</a>
+													<a ngbDropdownItem  class="dropdown-item" href="javascript:void(0);">
+														INR
+													</a>
+													<a ngbDropdownItem href="javascript:void(0);" class="dropdown-item" >
+														GBP
+													</a>
+												</div>
+											</li>
+											<!-- <li class="d-lg-none">
+												<a href="javascript:void(0);" class="callnumber text-dark"><span><i class="fa fa-phone me-1"></i>: +425 345 8765</span></a>
+											</li> -->
+										</ul>
+									<div class="clearfix">
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-sm-8 col-5">
+								<div class="top-bar-right">
+									<ul class="custom">
+										<li>
+											<a routerLink="/custom-pages/register" class="text-dark"><i class="fa fa-user me-1"></i> <span>Register</span></a>
+										</li>
+										<li>
+											<a routerLink="/custom-pages/login" class="text-dark"><i class="fa fa-sign-in me-1"></i> <span>Login</span></a>
+										</li>
+										<li class="dropdown ngMobile-dropdown" ngbDropdown>
+											<a href="javascript:void(0);" class="text-dark" data-bs-toggle="dropdown" ngbDropdownToggle> 
+												<i class="fa fa-home me-1"></i>
+												<span> My Dashboard<i class="fa fa-caret-down ms-1"></i></span>
+											</a>
+											<div ngbDropdownMenu class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+												<a ngbDropdownItem routerLink="/pages/user-pages/my-dashboard" class="dropdown-item" >
+													<i class="dropdown-icon icon icon-user text-primary"></i> My Profile
+												</a>
+												<a ngbDropdownItem class="dropdown-item" routerLink="/pages/user-pages/my-dashboard">
+													<i class="dropdown-icon icon icon-speech text-primary"></i> Inbox
+												</a>
+												<a ngbDropdownItem class="dropdown-item" routerLink="/pages/user-pages/my-dashboard">
+													<i class="dropdown-icon icon icon-bell text-primary"></i> Notifications
+												</a>
+												<a ngbDropdownItem routerLink="/pages/user-pages/my-dashboard" class="dropdown-item" >
+													<i class="dropdown-icon  icon icon-settings text-primary"></i> Account Settings
+												</a>
+												<a ngbDropdownItem class="dropdown-item" routerLink="/custom-pages/login">
+													<i class="dropdown-icon icon icon-power text-primary"></i> Log out
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/Topbar-->
+
+
+
+
+
+

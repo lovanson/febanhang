@@ -1,0 +1,53 @@
+	
+<div class="row">
+					<div class="col-xl-4 col-md-6" *ngFor="let card of data">
+						<div class="card overflow-hidden">
+							<div class="item-card2-tans">
+								<div class="item-card7-imgs">
+									<a routerLink="/pages/otherpages-1/page-details"></a>
+									<img [src]="card.src"  alt="img" class="cover-image">
+									<div class="tag-text">
+										<span class="bg-dark-transparent tag-option">{{card.tag}}</span>
+									</div>
+								</div>
+								<div class="item-card2-iconsoverlay">
+									<a href="javascript:void(0);" class="btn ripple  btn-info me-1"><i class="fe fe-airplay me-1"></i>{{card.preview}}</a>
+									<a href="javascript:void(0);" class="btn ripple  btn-secondary me-1"><i class="fe fe-eye me-1"></i>{{card.details}}</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text mb-1">
+										<a routerLink="/pages/otherpages-1/page-details" class="text-dark"><h4 class="font-weight-semibold">{{card.title}}</h4></a>
+									</div>
+									<div class="mt-1 fs-13 mb-3">
+									by <a href="javascript:void(0);" class="">{{card.name}}</a> in by <a href="javascript:void(0);" class="">{{card.summary}}</a>
+									</div>
+									<div class="d-flex mt-0 mb-0">
+										<div class="mt-1 mb-0">
+											<a class="btn ripple btn-primary btn-sm me-1" href="javascript:void(0);">{{card.btn1}}</a>
+											<a class="btn ripple btn-secondary btn-sm me-1" href="javascript:void(0);"><i class="fe fe-shopping-cart me-1 d-inline-flex"></i>{{card.btn2}}</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer pt-3">
+								<div class="d-flex">
+									<div class="mt-1 fs-13 d-inline-flex">
+										<span class="text-muted me-4"><i class="fe fe-download"></i> {{card.download}}</span>
+										<span class="text-muted"><i class="fe fe-heart me-1 align-middle"></i>{{card.like}}</span>
+									</div>
+									<div class="ms-auto">
+										<div class="item-card9-cost">
+											<h4 class=" mb-0 fs-20 text-dark">{{card.price}}</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+
+				

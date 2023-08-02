@@ -1,0 +1,233 @@
+<app-bannering
+  [title]="'Blog-Details'"
+  [items]="['Home', 'Blog', 'Blog-Details']"
+></app-bannering>
+
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-8 col-md-12">
+        <div class="card blog-detail">
+          <div class="card-body">
+            <h2 class="mb-5 fs-24">
+              <a href="javascript:void(0);" class="text-dark"
+                >Nemo enim ipsam voluptatem denouncing pleasure</a
+              >
+            </h2>
+            <div class="item7-card-img br-4">
+              <img src="./assets/images/banners/banner8.jpg" alt="img" />
+            </div>
+            <div class="item7-card-desc d-flex mb-2 mt-3">
+              <a href="javascript:void(0);" class="text-muted"
+                ><i class="fa fa-calendar-o me-2"></i>Nov-28-2020</a
+              >
+              <a href="javascript:void(0);" class="text-muted"
+                ><i class="fa fa-user-o text-muted me-2"></i>Nissy Sten</a
+              >
+              <div class="ms-auto">
+                <a href="javascript:void(0);" class="text-muted me-0"
+                  ><i class="fa fa-comment-o me-2"></i>2 Comments</a
+                >
+              </div>
+            </div>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system, and expound the actual teachings of the
+              great explorer of the truth, the master-builder of human
+              happiness. No one rejects, dislikes, or avoids pleasure itself,
+              because it is pleasure, but because those who do not know how to
+              pursue pleasure rationally encounter consequences that are
+              extremely painful.
+            </p>
+            <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis est et expedita distinctio. Nam libero tempore, cum soluta
+              nobis est eligendi optio cumque nihil impedit quo minus id quod
+              maxime placeat facere possimus, omnis voluptas assumenda est,
+              omnis dolor repellendus. Temporibus autem quibusdam et aut
+              officiis debitis aut rerum necessitatibus saepe eveniet ut et
+              voluptates repudiandae sint et molestiae non recusandae.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Comments</h3>
+          </div>
+          <div class="card-body p-0">
+            <div class="media mt-0 p-5">
+              <div class="d-flex me-3">
+                <a href="javascript:void(0);"
+                  ><img
+                    class="media-object brround"
+                    alt="64x64"
+                    src="./assets/images/users/male/1.jpg"
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="mt-0 mb-1">
+                  Joanne Scott
+                  <span class="fs-12 ms-0" ngbTooltip="verified" placement="top"
+                    ><i class="fa fa-check-circle-o text-success"></i
+                  ></span>
+                  <span class="fs-12 ms-2">
+                    4.5
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star-half-o text-yellow"></i>
+                  </span>
+                </h4>
+                <small class="text-muted"
+                  ><i class="fa fa-calendar"></i> Dec 21st
+                  <i class="ms-3 fa fa-clock-o"></i> 13.00
+                  <i class="ms-3 fa fa-map-marker"></i> Brezil</small
+                >
+                <p class="fs-15 mb-2 mt-2">
+                  Ut enim ad minim veniam, quis Neque porro quisquam est, qui
+                  dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                  velit, sed quia non numquam eius modi tempora incidunt ut
+                  labore et nostrud exercitation ullamco laboris commodo
+                  consequat.
+                </p>
+                <app-message-modal></app-message-modal>
+                <app-comment-modal></app-comment-modal>
+                <app-report-modal></app-report-modal>
+                <div class="media mt-5">
+                  <div class="d-flex me-3">
+                    <a href="javascript:void(0);">
+                      <img
+                        class="media-object brround"
+                        alt="64x64"
+                        src="./assets/images/users/female/2.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="mt-0 mb-1">
+                      Rose Slater
+                      <span
+                        class="fs-12 ms-0"
+                        ngbTooltip="verified"
+                        placement="top"
+                        ><i class="fa fa-check-circle-o text-success"></i
+                      ></span>
+                    </h4>
+                    <small class="text-muted"
+                      ><i class="fa fa-calendar"></i> Dec 22st
+                      <i class="ms-3 fa fa-clock-o"></i> 6.00
+                      <i class="ms-3 fa fa-map-marker"></i> Brezil</small
+                    >
+                    <p class="fs-15 mb-2 mt-2">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris commodo Sed ut perspiciatis unde omnis iste natus
+                      error sit voluptatem accusantium laboriosam, nisi ut
+                      aliquid ex ea commodi consequatur consequat.
+                    </p>
+                    <app-comment-modal></app-comment-modal>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media ps-5 pe-5 pb-5 pt-3 mt-0">
+              <div class="d-flex me-3">
+                <a href="javascript:void(0);">
+                  <img
+                    class="media-object brround"
+                    alt="64x64"
+                    src="./assets/images/users/male/3.jpg"
+                  />
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="mt-0 mb-1">
+                  Edward
+                  <span class="fs-12 ms-0" ngbTooltip="verified" placement="top"
+                    ><i class="fa fa-check-circle-o text-success"></i
+                  ></span>
+                  <span class="fs-12 ms-2">
+                    4
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star text-yellow"></i>
+                    <i class="fa fa-star-o text-yellow"></i>
+                  </span>
+                </h4>
+                <small class="text-muted"
+                  ><i class="fa fa-calendar"></i> Dec 21st
+                  <i class="ms-3 fa fa-clock-o"></i> 16.35
+                  <i class="ms-3 fa fa-map-marker"></i> UK</small
+                >
+                <p class="fs-15 mb-2 mt-2">
+                  Ut enim ad minim veniam, quis Neque porro quisquam est, qui
+                  dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                  velit, sed quia non numquam eius modi tempora incidunt ut
+                  labore et nostrud exercitation ullamco laboris commodo
+                  consequat.
+                </p>
+                <app-message-modal></app-message-modal>
+                <app-comment-modal></app-comment-modal>
+                <app-report-modal></app-report-modal>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-lg-0">
+          <div class="card-header">
+            <h3 class="card-title">Write Your Comments</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name1"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email address"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="example-textarea-input"
+                rows="6"
+                placeholder="Write Your Comment"
+              ></textarea>
+            </div>
+            <a href="javascript:void(0);" class="btn ripple btn-primary"
+              >Submit</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--Rightside Content-->
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <app-blog-search></app-blog-search>
+      </div>
+      <!--/Rightside Content-->
+    </div>
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

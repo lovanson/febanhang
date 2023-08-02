@@ -1,0 +1,15 @@
+// ::ng-deep{
+//     .ng-select.ng-select-single .ng-select-container {
+//             height: 22px;
+//             width: 150px;
+// }
+// }
+
+
+.my-custom-settings{
+    z-index: 0 !important;
+}
+
+.my-custom-settings.ng-select-opened{
+    z-index: 9 !important;
+}

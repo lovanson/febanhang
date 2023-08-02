@@ -1,0 +1,1745 @@
+<app-bannering2
+  [title]="'Ad Listing'"
+  [items]="['Home', 'Pages','Ad Listing']"
+></app-bannering2>
+
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 col-lg-8 col-md-12">
+        <!--Itemsd lists-->
+        <div class="mb-lg-0">
+          <div class="ngad-listing-image">
+            <div class="item2-gl">
+              <div class="mb-0">
+                <div class="">
+                  <div class="p-5 bg-white item2-gl-nav d-flex align-items-center">
+                    <h6 class="mb-0 mt-2 me-3">
+                      Showing 1 to 10 of 30 entries
+                    </h6>
+                    <ul ngbNav #nav="ngbNav" class="nav item2-gl-menu ms-auto">
+                      <li [ngbNavItem]="1" class="">
+                        <a
+                          ngbNavLink
+                          class="show"
+                          data-bs-toggle="tab"
+                          title="List style"
+                          ><i class="fa fa-list"></i
+                        ></a>
+                        <ng-template ngbNavContent>
+                          <div class="tab-pane active" id="tab-11">
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div
+                                  class="power-ribbon power-ribbon-top-left text-warning"
+                                >
+                                  <span class="bg-warning"
+                                    ><i class="fa fa-bolt"></i
+                                  ></span>
+                                </div>
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <ngb-carousel
+                                        *ngIf="images"
+                                        class="carousel car-slide item-card9-imgs"
+                                        [showNavigationArrows]="
+                                          showNavigationArrows
+                                        "
+                                        [showNavigationIndicators]="
+                                          showNavigationIndicators
+                                        "
+                                      >
+                                        <ng-template
+                                          ngbSlide
+                                          *ngFor="let image of images"
+                                          class="carousel-inner br-0"
+                                        >
+                                          <div class="carousel-item active">
+                                            <img
+                                              [src]="image"
+                                              alt="Random slide"
+                                              class="cover-image"
+                                            />
+                                          </div>
+                                        </ng-template>
+                                      </ngb-carousel>
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        HTML
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars block">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="4"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="mb-1 text-over">
+                                            Andora – Admin WebApp HTML Dashboard
+                                            Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a
+                                            href="javascript:void(0);"
+                                            class=""
+                                          >
+                                            Piers</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >HTML Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost mt-1">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $25
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-3">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                36 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div
+                                  class="power-ribbon power-ribbon-top-left text-warning"
+                                >
+                                  <span class="bg-warning"
+                                    ><i class="fa fa-bolt"></i
+                                  ></span>
+                                </div>
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/4.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        Wordpress
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="text-over">
+                                            Bioplex - Beauty & Spa Creative
+                                            Wordpress Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a href="javascript:void(0);" class=""
+                                            >Emily</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >Wordpress Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $24
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-2">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                25 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1 me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div
+                                  class="power-ribbon power-ribbon-top-left text-warning"
+                                >
+                                  <span class="bg-warning"
+                                    ><i class="fa fa-bolt"></i
+                                  ></span>
+                                </div>
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/5.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        Angular
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="text-over">
+                                            Splink - Admin Angular Dashboard
+                                            Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a href="javascript:void(0);" class=""
+                                            >Jessica</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >Angular Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $32
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-2">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                123 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/6.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        PHP
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="4"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="text-over">
+                                            Adon - Admin PHP Dashboard Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a
+                                            href="javascript:void(0);"
+                                            class=""
+                                          >
+                                            John</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >PHP Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $32
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-2">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                298 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/7.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        PSD
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="text-over">
+                                            GrowBiz - Busniess & Multipurpose
+                                            PSD Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a
+                                            href="javascript:void(0);"
+                                            class=""
+                                          >
+                                            Piers</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >PSD Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $25
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-2">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                15 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                              <div class="item-card-btn-hover">
+                                <div class="d-md-flex">
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/8.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        container="body"
+                                        placement="top"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        HTML
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card border-0 mb-0">
+                                    <div class="card-body">
+                                      <div class="item-card9">
+                                        <a
+                                          routerLink="/pages/otherpages-1/page-details"
+                                          class="text-dark"
+                                          ><h3 class="text-over">
+                                            Hzone - Modern HTML Hosting Template
+                                          </h3></a
+                                        >
+                                        <div class="fs-13 mb-3">
+                                          by
+                                          <a
+                                            href="javascript:void(0);"
+                                            class=""
+                                          >
+                                            Eric</a
+                                          >
+                                          in
+                                          <a href="javascript:void(0);" class=""
+                                            >HTML Templates</a
+                                          >
+                                        </div>
+                                        <p class="fs-13 mb-0 text-muted">
+                                          Lorem Ipsum available, quis int lorem
+                                          ipsum nostrum exercitationem
+                                        </p>
+                                        <div class="d-flex mt-4">
+                                          <div class="item-card9-cost">
+                                            <h4 class="text-dark fs-25 mb-0">
+                                              $24
+                                            </h4>
+                                          </div>
+                                          <div class="ms-auto">
+                                            <div class="mt-2">
+                                              <span class="fs-13"
+                                                ><i
+                                                  class="fe fe-download text-muted me-1"
+                                                ></i>
+                                                27 Sales</span
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item-card-btn">
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-primary me-1"
+                                    ><i
+                                      class="fe fe-airplay me-1 d-inline-flex"
+                                    ></i
+                                    >Live Preview</a
+                                  >
+                                  <a
+                                    href="javascript:void(0);"
+                                    class="btn ripple btn-secondary me-1"
+                                    ><i
+                                      class="fe fe-shopping-cart me-1 d-inline-flex"
+                                    ></i
+                                    >Buy Now</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                      </li>
+                      <li [ngbNavItem]="2">
+                        <a
+                          ngbNavLink
+                          href="#tab-12"
+                          data-bs-toggle="tab"
+                          class="show"
+                          title="Grid"
+                          ><i class="fa fa-th"></i
+                        ></a>
+                        <ng-template ngbNavContent>
+                          <div class="tab-pane" id="tab-12">
+                            <div class="row">
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div
+                                    class="power-ribbon power-ribbon-top-left text-warning"
+                                  >
+                                    <span class="bg-warning"
+                                      ><i class="fa fa-bolt"></i
+                                    ></span>
+                                  </div>
+                                  <div class="item-card9-img">
+                                    <div class="item-card9-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <ngb-carousel
+                                        *ngIf="images1"
+                                        class="carousel car-slide item-card9-imgs"
+                                        [showNavigationArrows]="
+                                          showNavigationArrows
+                                        "
+                                        [showNavigationIndicators]="
+                                          showNavigationIndicators
+                                        "
+                                      >
+                                        <ng-template
+                                          ngbSlide
+                                          *ngFor="let image of images1"
+                                          class="carousel-inner br-0"
+                                        >
+                                          <div class="carousel-item active">
+                                            <img
+                                              [src]="image"
+                                              alt="Random slide"
+                                              class="cover-image"
+                                            />
+                                          </div>
+                                        </ng-template>
+                                      </ngb-carousel>
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        HTML
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="4"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          Andora – Admin WebApp HTML Dashboard
+                                          Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class=""
+                                          >Piers</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >HTML Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13 me-4"
+                                            ><i
+                                              class="fe fe-eye text-muted me-1"
+                                            ></i>
+                                            36 Views</span
+                                          >
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            36 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $25
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div
+                                    class="power-ribbon power-ribbon-top-left text-warning"
+                                  >
+                                    <span class="bg-warning"
+                                      ><i class="fa fa-bolt"></i
+                                    ></span>
+                                  </div>
+                                  <div class="item-card9-img">
+                                    <div class="item-card2-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/thumb-list/thumb-2.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                        >Wordpress</a
+                                      >
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          Bioplex - Beauty & Spa Creative
+                                          Wordpress Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class=""
+                                          >Emily</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >Wordpress Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            25 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $24
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div
+                                    class="power-ribbon power-ribbon-top-left text-warning"
+                                  >
+                                    <span class="bg-warning"
+                                      ><i class="fa fa-bolt"></i
+                                    ></span>
+                                  </div>
+                                  <div class="item-card9-img">
+                                    <div class="item-card2-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/thumb-list/thumb-3.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                        >Angular</a
+                                      >
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          Splink - Admin Angular Dashboard
+                                          Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class=""
+                                          >Jessica</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >Angular Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13 me-4"
+                                            ><i
+                                              class="fe fe-eye text-muted me-1"
+                                            ></i>
+                                            467 Views</span
+                                          >
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            123 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $32
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div class="item-card9-img">
+                                    <div class="item-card2-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/thumb-list/thumb-4.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        PHP
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="4"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          Adon - Admin PHP Dashboard Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class="">
+                                          John</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >PHP Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13 me-4"
+                                            ><i
+                                              class="fe fe-eye text-muted me-1"
+                                            ></i>
+                                            536 Views</span
+                                          >
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            298 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $32
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div class="item-card9-img">
+                                    <div class="item-card2-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/thumb-list/thumb-5.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        PSD
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          GrowBiz - Busniess & Multipurpose PSD
+                                          Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class=""
+                                          >Piers</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >PSD Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13 me-4"
+                                            ><i
+                                              class="fe fe-eye text-muted me-1"
+                                            ></i>
+                                            198 Views</span
+                                          >
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            15 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $25
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-xl-6">
+                                <div class="card overflow-hidden">
+                                  <div class="item-card9-img">
+                                    <div class="item-card2-imgs">
+                                      <a routerLink="/pages/otherpages-1/page-details"></a>
+                                      <img
+                                        src="./assets/images/media/pictures/thumb-list/thumb-6.jpg"
+                                        alt="img"
+                                        class="cover-image"
+                                      />
+                                    </div>
+                                    <div class="item-card9-icons">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-pink me-1"
+                                        ngbTooltip="Wishlist"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="fa fa fa-heart-o"></i
+                                      ></a>
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="item-card9-icons1 bg-purple me-1"
+                                        ngbTooltip="Share"
+                                        placement="top"
+                                        container="body"
+                                      >
+                                        <i class="icon icon-share"></i
+                                      ></a>
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-white"
+                                      >
+                                        HTML
+                                      </a>
+                                    </div>
+                                    <div class="item-trans-rating">
+                                      <div class="rating-stars d-flex">
+                                        <input
+                                          type="number"
+                                          readonly="readonly"
+                                          class="rating-value star"
+                                          name="rating-stars-value"
+                                          value="3"
+                                        />
+                                        <div class="d-inline-flex">
+                                          <ngb-rating
+                                            class="text-warning"
+                                            [(rate)]="currentRate"
+                                            [max]="5"
+                                          ></ngb-rating>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="item-card9">
+                                      <a
+                                        routerLink="/pages/otherpages-1/page-details"
+                                        class="text-dark"
+                                        ><h4 class="text-over">
+                                          Hzone - Modern HTML Hosting Template
+                                        </h4></a
+                                      >
+                                      <div class="fs-13 mb-4">
+                                        by
+                                        <a href="javascript:void(0);" class=""
+                                          >Eric</a
+                                        >
+                                        in
+                                        <a href="javascript:void(0);" class=""
+                                          >PSD Templates</a
+                                        >
+                                      </div>
+                                      <div class="d-flex">
+                                        <div class="mt-1">
+                                          <span class="fs-13 me-4"
+                                            ><i
+                                              class="fe fe-eye text-muted me-1"
+                                            ></i>
+                                            378 Views</span
+                                          >
+                                          <span class="fs-13"
+                                            ><i
+                                              class="fe fe-download text-muted me-1"
+                                            ></i>
+                                            27 Sales</span
+                                          >
+                                        </div>
+                                        <div class="ms-auto">
+                                          <h4 class="mb-0 text-dark fs-25">
+                                            $24
+                                          </h4>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="item-card9-footer d-flex">
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-primary me-1 m-1"
+                                        ><i
+                                          class="fe fe-airplay me-1 d-inline-flex"
+                                        ></i
+                                        >Preview</a
+                                      >
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="btn ripple btn-secondary me-1 m-1"
+                                        ><i
+                                          class="fe fe-shopping-cart me-1 d-inline-flex"
+                                        ></i
+                                        >Buy Now</a
+                                      >
+                                      <div class="ms-auto">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="btn ripple btn-outline-warning btn-icon m-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Add To Collections"
+                                          ><i
+                                            class="fa fa-folder-open-o fs-14"
+                                          ></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                      </li>
+                    </ul>
+                    <div class="d-md-flex d-block select2-sm">
+                      <label class="me-2 mt-2 mb-sm-1">Sort By:</label>
+                      <ng-select name="item" class="select2" ngModel="Latest" [searchable]="false" [clearable]="false">
+                        <ng-option value="1">Latest</ng-option>``
+                        <ng-option value="2">Oldest</ng-option>
+                        <ng-option value="3">Fees:Low-to-High</ng-option>
+                        <ng-option value="5">Fees:Hight-to-Low</ng-option>
+                      </ng-select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content Marketplace" [ngbNavOutlet]="nav"></div>
+            </div>
+            <div class="center-block text-center">
+              <ul class="pagination mb-5 mb-lg-0">
+                <li class="page-item page-prev disabled">
+                  <a class="page-link" href="javascript:void(0);" tabindex="-1"
+                    >Prev</a
+                  >
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="javascript:void(0);">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0);">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0);">3</a>
+                </li>
+                <li class="page-item page-next">
+                  <a class="page-link" href="javascript:void(0);">Next</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--/Itemsd lists-->
+      </div>
+      <!--Right Side Content-->
+      <div class="col-xl-3 col-lg-4 col-md-12">
+        <app-right-sidebar></app-right-sidebar>
+      </div>
+      <!--/Right Side Content-->
+    </div>
+  </div>
+</section>
+<!--Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

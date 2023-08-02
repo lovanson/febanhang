@@ -1,0 +1,141 @@
+<app-bannering1
+  [title]="'My Items'"
+  [items]="['Pages', 'My Items']"
+></app-bannering1>
+<!--User Dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-12 col-md-12">
+       <app-sidebar-dashboard></app-sidebar-dashboard>
+      </div>
+      <div class="col-xl-9 col-lg-12 col-md-12">
+        <div class="card ads-tabs">
+          <div class="card-body me-5">
+            <div
+              class="d-block d-sm-flex tabs-menus mb-0 item2-gl-nav bg-white p-0 border-0"
+            >
+              <ul ngbNav #nav="ngbNav" class="nav panel-tabs mt-1">
+                <li [ngbNavItem]="1" class="">
+                  <a ngbNavLink class="" data-bs-toggle="tab"
+                    >Portfolio</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div
+                      class="tab-pane active table-responsive border-0 manged-ad" 
+                      id="tab1"
+                    >
+                      <app-table1></app-table1>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a ngbNavLink href="#tab2" data-bs-toggle="tab"
+                    >Upload Items</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div
+                      class="tab-pane table-responsive userprof-tab manged-ad"
+                      id="tab2"
+                    >
+                      <app-table1></app-table1>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3" class="d-inline-block">
+                  <a ngbNavLink href="#tab3" data-bs-toggle="tab">Followers</a>
+                  <ng-template ngbNavContent>
+                    <div
+                      class="tab-pane table-responsive userprof-tab"
+                      id="tab3"
+                    >
+                      <div class="">
+                        <app-table2></app-table2>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+              <div class="ms-auto my-auto">
+                <div class="d-flex select2-sm mt-3 mt-sm-0">
+                  <label class="me-2 mt-2 mb-sm-1">Sort By:</label>
+                  <ng-select [searchable]="false" [clearable]="false"
+                    name="item"
+                    class=" select-sm select2" placeholder="select"
+                  >
+                    <ng-option value="1">Latest</ng-option>
+                    <ng-option value="2">Oldest</ng-option>
+                    <ng-option value="3">Fees:Low-to-High</ng-option>
+                    <ng-option value="5">Fees:Hight-to-Low</ng-option>
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card border-0">
+          <div class="tab-content" [ngbNavOutlet]="nav"></div>
+        </div>
+        <ul class="pagination justify-content-end">
+          <li class="page-item page-prev disabled">
+            <a class="page-link" href="javascript:void(0);" tabindex="-1"
+              >Prev</a
+            >
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="javascript:void(0);">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">5</a>
+          </li>
+          <li class="page-item page-next">
+            <a class="page-link" href="javascript:void(0);">Next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--User Dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-6 col-md-12">
+        <div class="sub-newsletter">
+          <h3 class="mb-2 fs-20">
+            <i class="fa fa-paper-plane-o me-2"></i> Subscribe To Our
+            Onlinesletter
+          </h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-6 col-md-12">
+        <div class="input-group sub-input mt-1">
+          <input
+            type="text"
+            class="form-control input-lg"
+            placeholder="Enter your Email"
+          />
+          <button type="button" class="btn ripple btn-primary br-te-3 br-be-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Onlinesletter-->

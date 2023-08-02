@@ -1,0 +1,34 @@
+<div class="horizontalMenucontainer">
+  <!-- <app-loader></app-loader> -->
+  <div
+    class="user-pattern-2"
+    ata-bs-image-src="./assets/images/banners/banner2.jpg"
+  >
+    <div class="header-main">
+      <app-top-bar></app-top-bar>
+      <app-header-search></app-header-search>
+      <div
+        id="sticky-wrapper"
+        class="sticky-wrapper"
+        style="height: 31.5781px"
+        [ngClass]="{ 'is-sticky': scrolled }"
+      >
+        <app-horizontal-header></app-horizontal-header>
+      </div>
+      <div
+        id="sticky-wrapper"
+        class="sticky-wrapper"
+        style="height: 0px"
+        [ngClass]="{ 'is-sticky': scrolled }"
+      >
+        <div class="header-style horizontal-main clearfix">
+          <app-horizontal-main></app-horizontal-main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- <app-cookies></app-cookies> -->
+  <app-back-to-top></app-back-to-top>
+  <app-footer [isValid]="'footer1'"></app-footer>
+</div>

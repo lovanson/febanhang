@@ -1,0 +1,99 @@
+<app-bannering1
+  [title]="'Managed Items'"
+  [items]="['Pages', 'Managed Items']"
+></app-bannering1>
+<!--User Dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-12 col-md-12">
+        <app-sidebar-dashboard></app-sidebar-dashboard>
+      </div>
+      <div class="col-xl-9 col-lg-12 col-md-12">
+        <div class="mb-5">
+          <div class="">
+            <div class="p-5 bg-white item2-gl-nav d-flex">
+              <h6 class="mb-0 mt-1 card-title">67 Manged Items</h6>
+              <div class="ms-auto">
+                <div class="d-flex select2-sm text-start">
+                  <label class="me-2 mt-2 mb-sm-1">Sort By:</label>
+                  <ng-select name="item" placeholder="All Categories" [searchable]="false" [clearable]="false" class="select-sm select2">
+                    <ng-option value="1">Best Seller</ng-option>
+                    <ng-option value="2">Newest</ng-option>
+                    <ng-option value="3">Best Rated</ng-option>
+                    <ng-option value="4">Trending</ng-option>
+                    <ng-option value="5">Price</ng-option>
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card manged-ad">
+          <div class="table-responsive">
+            <app-table1></app-table1>
+          </div>
+        </div>
+        <ul class="pagination justify-content-end">
+          <li class="page-item page-prev disabled">
+            <a class="page-link" href="javascript:void(0);" tabindex="-1"
+              >Prev</a
+            >
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="javascript:void(0);">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);">5</a>
+          </li>
+          <li class="page-item page-next">
+            <a class="page-link" href="javascript:void(0);">Next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User Dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-6 col-md-12">
+        <div class="sub-newsletter">
+          <h3 class="mb-2 fs-20">
+            <i class="fa fa-paper-plane-o me-2"></i> Subscribe To Our
+            Onlinesletter
+          </h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-6 col-md-12">
+        <div class="input-group sub-input mt-1">
+          <input
+            type="text"
+            class="form-control input-lg"
+            placeholder="Enter your Email"
+          />
+          <button type="button" class="btn ripple btn-primary br-te-3 br-be-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Onlinesletter-->

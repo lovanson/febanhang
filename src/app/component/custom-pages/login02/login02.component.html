@@ -1,0 +1,221 @@
+<app-bannering1 [title]="'Login'" [items]="['Home', 'Login']"></app-bannering1>
+
+<!--Login-Section-->
+<section class="sptb">
+  <div class="container customerpage">
+    <div class="row">
+      <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+        <div class="row">
+          <div class="col-xl-12 col-md-12 col-md-12 register-right">
+            <ul
+              ngbNav
+              #nav="ngbNav"
+              class="nav nav-tabs nav-justified mb-5 p-2 border"
+              id="myTab"
+              role="tablist"
+            >
+              <li [ngbNavItem]="1" class="nav-item">
+                <a
+                  ngbNavLink
+                  class="nav-link m-1 border"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >Login</a
+                >
+                <ng-template ngbNavContent>
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div class="single-page w-100 p-0">
+                      <div class="wrapper wrapper2">
+                        <div class="card-body pb-4">
+                          <div class="btn-list d-flex">
+                            <a
+                              href="https://www.google.com/gmail/"
+                              class="btn btn-google btn-block"
+                              ><i class="fa fa-google fa-1x me-2"></i> Google</a
+                            >
+                            <a
+                              href="https://twitter.com/"
+                              class="btn btn-twitter"
+                              ><i class="fa fa-twitter fa-1x"></i
+                            ></a>
+                            <a
+                              href="https://www.facebook.com/"
+                              class="btn btn-facebook"
+                              ><i class="fa fa-facebook fa-1x"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <hr class="divider" />
+                        <form id="login" class="card-body" >
+                          <div class="mail">
+                            <input type="email" name="mail" />
+                            <label>Mail or Username</label>
+                          </div>
+                          <div class="passwd mb-0">
+                            <input type="password" name="password" />
+                            <label>Password</label>
+                          </div>
+                          <div class="form-group pt-3 mt-4">
+                            <label class="custom-control form-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <span
+                                class="custom-control-label text-dark ms-4 mt-1"
+                                >Remember me</span
+                              >
+                            </label>
+                          </div>
+                          <div class="submit">
+                            <a
+                              class="btn ripple btn-primary btn-block"
+                              href="javascript:void(0);"
+                              >Login</a
+                            >
+                          </div>
+                          <p class="mb-2">
+                            <a routerLink="/custom-pages/forgot-password">Forgot Password</a>
+                          </p>
+                          <p class="text-dark mb-0">
+                            Don't have account?<a
+                             routerLink="/custom-pages/register"
+                              class="text-primary ms-1"
+                              >Sign UP</a
+                            >
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2" class="nav-item">
+                <a
+                  ngbNavLink
+                  class="nav-link m-1 border"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >Register</a
+                >
+                <ng-template ngbNavContent>
+                  <div
+                    class="tab-pane fade show"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <div class="single-page w-100 p-0">
+                      <div class="wrapper wrapper2">
+                        <div class="card-body pb-4">
+                          <div class="btn-list d-flex">
+                            <a
+                              href="https://www.google.com/gmail/"
+                              class="btn btn-google btn-block"
+                              ><i class="fa fa-google fa-1x me-2"></i> Google</a
+                            >
+                            <a
+                              href="https://twitter.com/"
+                              class="btn btn-twitter"
+                              ><i class="fa fa-twitter fa-1x"></i
+                            ></a>
+                            <a
+                              href="https://www.facebook.com/"
+                              class="btn btn-facebook"
+                              ><i class="fa fa-facebook fa-1x"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <hr class="divider" />
+                        <form id="Register" class="card-body" tabindex="500">
+                          <div class="name">
+                            <input type="text" name="name" />
+                            <label>Name</label>
+                          </div>
+                          <div class="mail">
+                            <input type="email" name="mail" />
+                            <label>Mail or Username</label>
+                          </div>
+                          <div class="passwd">
+                            <input type="password" name="password" />
+                            <label>Password</label>
+                          </div>
+                          <div class="submit">
+                            <a
+                              class="btn ripple btn-primary btn-block"
+                              href="javascript:void(0);"
+                              >Register</a
+                            >
+                          </div>
+                          <p class="text-dark mb-0">
+                            Already have an account?<a
+                              routerLink="/custom-pages/login"
+                              class="text-primary ms-1"
+                              >Sign In</a
+                            >
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+            <div
+              class="tab-content"
+              id="myTabContent"
+              [ngbNavOutlet]="nav"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Login-Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-6 col-md-12">
+        <div class="sub-newsletter">
+          <h3 class="mb-2 fs-20">
+            <i class="fa fa-paper-plane-o me-2"></i> Subscribe To Our
+            Onlinesletter
+          </h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-6 col-md-12">
+        <div class="input-group sub-input mt-1">
+          <input
+            type="text"
+            class="form-control input-lg"
+            placeholder="Enter your Email"
+          />
+          <button type="button" class="btn ripple btn-primary br-te-3 br-be-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Onlinesletter-->

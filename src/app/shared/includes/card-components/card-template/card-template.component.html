@@ -1,0 +1,44 @@
+
+	<div class="row" >
+					<div class="col-xl-4 col-lg-6 col-md-6" *ngFor="let card of data">
+						<div class="card overflow-hidden">
+							<div class="item-card2-tans">
+								<div class="item-card7-imgs">
+									<a routerLink="/pages/otherpages-1/page-details"></a>
+									<img [src]="card.src" alt="img" class="cover-image">
+									<div class="tag-text">
+										<span class="bg-dark-transparent tag-option m-0"><i class="fe fe-download me-1 d-inline-flex"></i>{{card.download}}</span>
+										<span class="bg-dark-transparent tag-option"><i class="fe fe-heart me-1 d-inline-flex"></i>{{card.like}}</span>
+									</div>
+								</div>
+								<div class="item-card2-icons">
+									<a href="javascript:void(0);" class="bg-primary" ngbTooltip="{{card.tooltip1}}" placement="top" title="Live Preview"><i class="fe fe-airplay"></i></a>
+									<a href="javascript:void(0);" class="bg-secondary"  ngbTooltip="{{card.tooltip2}}" placement="top"><i class="fe fe-shopping-cart"></i></a>
+									<a href="javascript:void(0);" class="bg-info"  ngbTooltip="{{card.tooltip3}}" placement="top"><i class="fe fe-eye"></i></a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a routerLink="/pages/otherpages-1/page-details" class="text-dark"><h4 class="font-weight-semibold">{{card.title}}</h4></a>
+										<div class="mt-1 fs-13 mb-3">
+										by <a href="javascript:void(0);" class="">Emily</a> in <a href="javascript:void(0);" class="">{{card.title}}</a>
+										</div>
+									</div>
+									<div class="d-md-flex">
+										<div class=" d-inline-flex">
+										  <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5" ></ngb-rating>({{currentRate}})
+										</div>
+
+										<div class="ms-auto">
+											<div class="item-card9-cost">
+												<h4 class=" mb-0">{{card.price}}</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+ 

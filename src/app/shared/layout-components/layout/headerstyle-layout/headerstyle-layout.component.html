@@ -1,0 +1,43 @@
+<div class="horizontalMenucontainer">
+  <app-switcher></app-switcher>
+  <!-- <app-loader></app-loader> -->
+  <div>
+    <div class="header-main">
+      <app-top-bar></app-top-bar>
+      <div
+        id="sticky-wrapper"
+        class="sticky-wrapper"
+        style="height: 0px"
+        [ngClass]="{ 'is-sticky': scrolled }"
+      >
+        <app-horizontal-header></app-horizontal-header>
+        <div
+          id="sticky-wrapper"
+          class="sticky-wrapper"
+          style="height: 0px"
+          [ngClass]="{ 'is-sticky': scrolled }"
+        >
+          <div class="horizontal-main header-style1 clearfix">
+            <div class="horizontal-mainwrapper container clearfix">
+              <div class="desktoplogo">
+                <a routerLink="/home/home-page01"
+                  ><img src="./assets/images/brand/logo1.png" alt=""
+                /></a>
+              </div>
+              <div class="desktoplogo-1">
+                <a routerLink="/home/home-page01"
+                  ><img src="./assets/images/brand/logo.png" alt=""
+                /></a>
+              </div>
+              <app-horizontal-main></app-horizontal-main>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    <!-- <app-cookies></app-cookies>  -->
+    <app-back-to-top></app-back-to-top>
+    <app-footer></app-footer>
+  </div>
+</div>

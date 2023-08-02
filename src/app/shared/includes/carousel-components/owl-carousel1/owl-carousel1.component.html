@@ -1,0 +1,38 @@
+	<owl-carousel-o [options]="customOptions" class="">
+  <ng-container *ngFor="let slide of slidesStore"> 
+    <ng-template carouselSlide [id]="slide.id">
+			<div class="item">
+						<div class="card mb-0"> 
+							<div class="item7-card-img">
+								<a href="javascript:void(0);"></a>
+								<img [src]="slide.src" alt="img" class="cover-image">
+							</div> 
+							<div class="card-body p-4"> 
+								<div class="item7-card-desc d-flex mb-2">
+									<a href="javascript:void(0);"><i class="fa fa-calendar-o me-2"></i>{{slide.date}}</a>
+									<div class="ms-auto">
+										<a href="javascript:void(0);"><i class="fa fa-comment-o me-2"></i>{{slide.comments}}</a>
+									</div>
+								</div> 
+								<a routerLink="/blog/blog-details/blogdetails-left" class="text-dark"><h3 class="font-weight-semibold">{{slide.title}}</h3></a>
+								<p>{{slide.summary}} </p>
+								<div class="d-flex justify-content-between align-items-center pt-2 mt-auto">
+									<div class="d-flex">
+										<img [src]="slide.image" class=" brround avatar-md" alt="avatar-img">
+										<div class="ms-2 flex-grow-1">
+											<a routerLink="/pages/user-pages/user-profile" class="text-default">{{slide.name}}</a>
+											<small class="d-block text-muted">{{slide.status}}</small>
+										</div>
+									</div>
+									<div class="text-muted">
+										<a href="javascript:void(0)" class="icon d-none d-md-inline-block ms-3"><i class="fe fe-heart me-1"></i></a>
+										<a href="javascript:void(0)" class="icon d-none d-md-inline-block ms-3"><i class="fa fa-thumbs-o-up"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		    </ng-template
+    >
+  </ng-container>
+</owl-carousel-o>

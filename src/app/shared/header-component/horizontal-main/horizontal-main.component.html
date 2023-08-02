@@ -1,0 +1,149 @@
+<!--Horizontal-main -->
+
+<div class="horizontal-mainwrapper container clearfix">
+    <div id="customJsIcon">
+
+    </div>
+  <!-- <ng-scrollbar> -->
+    <nav class="horizontalMenu clearfix d-md-flex">
+      <div class="horizontal-overlapbg"></div>
+
+      <ul
+        class="horizontalMenu-list"
+        [ngClass]="{
+         slide: menuItems.title,
+                active: menuItems.selected,
+                'is-expanded': menuItems.active
+        }"
+      >
+
+      <li aria-haspopup="true" *ngFor="let items of menuItems">
+        <a *ngIf="items.type == 'link'" class="{{items.children[0].path == router.url?'active':''}}" routerLink="{{ items.children[0].path }}" >{{ items.children[0].title }}</a>
+
+        <span *ngIf="items.type == 'sub'" class="horizontalMenu-click"
+          (click)="toggleNavActive(items)" ><i class="horizontalMenu-arrow fa fa-angle-down"></i
+          ></span>
+        <a *ngIf="items.type == 'sub'" (click)="toggleNavActive(items)"
+            [ngClass]="{
+              active: items.selected,
+            }"
+            href="javascript:void(0);"
+            >{{ items.title }}<span class="fe fe-chevron-down"></span
+        ></a>
+        <ul *ngIf="items.type == 'sub'" class="sub-menu {{items.active ? 'open-in-mobile' : ''}}">
+            <li *ngFor="let childrens of items.children">
+              <ng-container aria-haspopup="true" *ngIf="childrens.type == 'link'">
+                <a class="{{childrens.path == router.url?'active':''}}" routerLink="{{ childrens.path }}" routerLinkActive="active">{{
+                  childrens.title
+                }}</a>
+              </ng-container>
+              <ng-container aria-haspopup="true" *ngIf="childrens.type == 'sub'">
+                <span class="horizontalMenu-click02" (click)="toggleNavActive(childrens)">
+                  <i class="{{childrens.active ? 'horizontalMenu-arrow fa fa-angle-down horizontalMenu-rotate' : 'horizontalMenu-arrow fa fa-angle-down'}}"></i>
+                </span>
+                <a
+                  [ngClass]="{
+                    active: childrens.active,
+                    'horizontalMenu-click': childrens.active
+                  }"
+                  href="javascript:void(0);" class="Working {{childrens.active ? 'active' : ''}}"
+                  >{{ childrens.title }}<span class="fa fa-angle-right float-end mt-1 d-none d-lg-block"></span
+                ></a>
+                <ul class="sub-menu {{childrens.active ? 'open-in-mobile' : ''}}">
+                  <li *ngFor="let subchildren of childrens.children">
+                    <ng-container
+                      aria-haspopup="true"
+                      *ngIf="subchildren.type == 'link'"
+                    >
+                      <a *ngIf="subchildren.path != '';else other_content"
+                      class="{{subchildren.path == router.url?'active':''}}"
+                        routerLink="{{ subchildren.path }}"
+                        routerLinkActive="active"
+                        >{{ subchildren.title }}</a
+                      >
+                      <ng-template #other_content>
+                        <a
+                      class="{{subchildren.path == router.url?'active':''}}"
+                        href="javascript:void(0);"
+                        routerLinkActive="active"
+                        >{{ subchildren.title }}</a
+                      >
+                      </ng-template>
+                    </ng-container>
+                    <ng-container
+                      aria-haspopup="true"
+                      *ngIf="subchildren.type == 'sub'"
+                    >
+                      <span class="horizontalMenu-click02" (click)="toggleNavActive(subchildren)"
+                        ><i class="horizontalMenu-arrow fa fa-angle-down"></i
+                      ></span>
+                      <a
+                        [ngClass]="{
+                          active: subchildren.active,
+                          'horizontalMenu-click': subchildren.active
+                        }"
+                        href="javascript:void(0);"
+                        >{{ subchildren.title}}
+                        <i class="fa fa-angle-right float-end mt-1 d-none d-lg-block"></i
+                      ></a>
+                      <ul class="sub-menu" [ngClass]="{'d-block' :subchildren.active}">
+                        <li *ngFor="let subchildren1 of subchildren.children" aria-haspopup="true">
+                          <a href="javascript:void(0);">{{subchildren1.title}}</a>
+                        </li>
+                      </ul>
+                    </ng-container>
+                  </li>
+                </ul>
+              </ng-container>
+            </li>
+        </ul>
+
+        <span *ngIf="items.type == 'mega menu'" class="horizontalMenu-click" (click)="toggleNavActive(items)"
+            ><i class="horizontalMenu-arrow fa fa-angle-down"></i></span
+          >
+
+          <a *ngIf="items.type == 'mega menu'" href="javascript:void(0);" [ngClass]="{
+            slide: items.title,
+                   active: items.selected,
+                   'is-expanded': items.active
+           }"
+            >{{ items.title }}<span class="fe fe-chevron-down"></span
+          ></a>
+          <div *ngIf="items.type == 'mega menu'" class="horizontal-megamenu clearfix {{items.active ? 'open-in-mobile' : ''}}">
+            <div class="container">
+              <div class="megamenu-content">
+                <div class="row">
+                  <ul
+                    class="col link-list"
+                    *ngFor="let megaMenuItem of items.children"
+                  >
+                    <li class="title">{{ megaMenuItem.title }}</li>
+                    <li *ngFor="let megaIteam of megaMenuItem.children">
+                      <a class="{{megaIteam.path == router.url?'active':''}}" routerLink="{{ megaIteam.path }}">{{ megaIteam.title }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </li>
+
+      </ul>
+      <ul class="mb-0 ms-auto">
+        <li aria-haspopup="true" class="d-none d-lg-block">
+           <span
+             ><a
+               routerLink="/custom-pages/register"
+               class="btn ripple btn-danger ad-post {{'/custom-pages/register' == router.url?'active':''}}"
+               ><i class="fa fa-cart-plus me-2 text-white fs-16"></i>Become a
+               Seller</a
+             ></span
+           >
+         </li>
+      </ul>
+    </nav>
+  <!-- </ng-scrollbar> -->
+</div>
+
+
+<!--/Horizontal-main -->

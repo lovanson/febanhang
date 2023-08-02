@@ -1,0 +1,289 @@
+<app-bannering1
+  [title]="'Checkout'"
+  [items]="['Pages', 'Checkout']"
+></app-bannering1>
+
+<!--User dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="card mb-lg-0">
+          <div class="card-header">
+            <h3 class="card-title">Billing Information</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label"
+                    >First Name <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Last Name <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Company Name <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Company name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Email address <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Country <span class="text-red">*</span></label
+                  >
+                  <ng-select class="select2" [searchable]="false" [clearable]="false">
+                    <ng-option value="0">--Select--</ng-option>
+                    <ng-option value="1">Germany</ng-option>
+                    <ng-option value="2">Canada</ng-option>
+                    <ng-option value="3">Usa</ng-option>
+                    <ng-option value="4">Aus</ng-option>
+                  </ng-select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Address <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Home Address"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label"
+                    >City <span class="text-red">*</span></label
+                  >
+                  <input type="text" class="form-control" placeholder="City" />
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label"
+                    >Postal Code <span class="text-red">*</span></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="ZIP Code"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Payment Method</h3>
+          </div>
+          <div class="card-body">
+            <div class="card-pay">
+              <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                <li [ngbNavItem]="1" class="m-0">
+                  <a ngbNavLink class="" data-bs-toggle="tab"
+                    ><i class="fa fa-credit-card"></i> Credit Card</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane active show" id="tab1">
+                      <div class="form-group">
+                        <label class="form-label" for="exampleInputEmail1"
+                          >CardHolder Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          placeholder="First Name"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Card number</label>
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search for..."
+                          />
+                          <span class="">
+                            <button class="btn btn-info" type="button">
+                              <i class="fa fa-cc-visa"></i> &nbsp;
+                              <i class="fa fa-cc-amex"></i> &nbsp;
+                              <i class="fa fa-cc-mastercard"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <div class="form-group">
+                            <label class="form-label">Expiration</label>
+                            <div class="input-group">
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="MM"
+                                name="exp"
+                              />
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="YY"
+                                name="exp"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="form-label"
+                              >CVV <i class="fa fa-question-circle"></i
+                            ></label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              required=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="javascript:void(0);"
+                        class="btn btn-secondary btn-block"
+                        >Confirm</a
+                      >
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2" class="m-0">
+                  <a ngbNavLink data-bs-toggle="tab" class=""
+                    ><i class="fa fa-paypal"></i> Paypal</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab2">
+                      <p>Paypal is easiest way to pay online</p>
+                      <p>
+                        <a href="javascript:void(0);" class="btn btn-primary"
+                          ><i class="fa fa-paypal"></i> Log in my Paypal</a
+                        >
+                      </p>
+                      <p class="mb-0">
+                        <strong>Note:</strong> Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                      </p>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3" class="m-0">
+                  <a ngbNavLink data-bs-toggle="tab" class=""
+                    ><i class="fa fa-university"></i> Bank Transfer</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab3">
+                      <p>Bank account details</p>
+                      <dl class="">
+                        <dt>BANK:</dt>
+                        <dd>THE UNION BANK 0456</dd>
+                      </dl>
+                      <dl class="">
+                        <dt>Account number:</dt>
+                        <dd>67542897653214</dd>
+                      </dl>
+                      <dl class="">
+                        <dt>IBAN:</dt>
+                        <dd>543218769</dd>
+                      </dl>
+                      <p class="mb-0">
+                        <strong>Note:</strong> Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                      </p>
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+              <div class="tab-content" [ngbNavOutlet]="nav"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-6 col-md-12">
+        <div class="sub-newsletter">
+          <h3 class="mb-2 fs-20">
+            <i class="fa fa-paper-plane-o me-2"></i> Subscribe To Our
+            Onlinesletter
+          </h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-6 col-md-12">
+        <div class="input-group sub-input mt-1">
+          <input
+            type="text"
+            class="form-control input-lg"
+            placeholder="Enter your Email"
+          />
+          <button type="button" class="btn ripple btn-primary br-te-3 br-be-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Onlinesletter-->

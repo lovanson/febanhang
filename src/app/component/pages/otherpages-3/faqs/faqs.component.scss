@@ -1,0 +1,10 @@
+::ng-deep{
+    .accordion{
+         background-color: #f5f6fd;
+         height: 20px;
+    }
+        .accordion .accordion-header,
+        .accordion {
+            padding: 0px;
+        }
+}

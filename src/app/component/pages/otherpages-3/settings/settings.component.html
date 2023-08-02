@@ -1,0 +1,736 @@
+<app-bannering1
+  [title]="'Settings'"
+  [items]="['Pages', 'Settings']"
+></app-bannering1>
+
+<!--user dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">My Dashboard</h3>
+          </div>
+          <div class="card-body text-center item-user">
+            <div class="profile-pic">
+              <div class="profile-pic-img mb-4">
+                <span
+                  class="bg-success dots"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="online"
+                ></span>
+                <img
+                  src="./assets/images/users/male/2.jpg"
+                  class="brround"
+                  alt="user"
+                />
+              </div>
+              <a routerLink="/pages/user-pages/user-profile" class="text-dark"
+                ><h4 class="mt-3 mb-0 font-weight-semibold">Jacob Smith</h4></a
+              >
+            </div>
+          </div>
+          <aside class="app-sidebar doc-sidebar my-dash">
+            <div class="app-sidebar__user clearfix">
+              <ul class="side-menu">
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/user-pages/my-dashboard" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-user"></i
+                    ><span class="side-menu__label">Edit Profile</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/user-pages/my-ads" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-codepen"></i
+                    ><span class="side-menu__label">My Items</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/user-pages/favourite-ads" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-heart"></i
+                    ><span class="side-menu__label">My Favorite</span></a
+                  >
+                </li>
+                <li class="slide {{expande ? 'is-expanded' : ''}}" >
+                  <a (click)="expande = !expande" routerLinkActive="active"
+                    class="side-menu__item"
+                    data-bs-toggle="slide"
+                    href="javascript:void(0);"
+                    ><i class="side-menu__icon fe fe-folder-plus"></i
+                    ><span class="side-menu__label">Managed Items</span
+                    ><i class="angle fa fa-angle-right"></i
+                  ></a>
+                  <ul class="slide-menu">
+                    <li>
+                      <a class="slide-item" routerLink="/pages/user-pages/managed-ads" routerLinkActive="active"
+                        ><i class="fa fa-caret-right me-2 text-muted"></i> Managed
+                        Items</a
+                      >
+                    </li>
+                    <li class="sub-slide {{expande1 ? 'is-expanded' : ''}}">
+                      <a (click)="expande1 = ! expande1" routerLinkActive="active"
+                        class="side-menu__item border-top-0 slide-item"
+                        href="javascript:void(0);"
+                        data-bs-toggle="sub-slide"
+                        ><span class="side-menu__label"
+                          ><i class="fa fa-caret-right me-2 text-muted"></i>
+                          Submenu</span
+                        >
+                        <i class="sub-angle fa fa-angle-right"></i
+                      ></a>
+                      <ul class="child-sub-menu">
+                        <li>
+                          <a class="slide-item" href="javascript:void(0);"
+                            ><i class="fa fa-caret-right me-2 text-muted"></i> Level
+                            1</a
+                          >
+                        </li>
+                        <li>
+                          <a class="slide-item" href="javascript:void(0);"
+                            ><i class="fa fa-caret-right me-2 text-muted"></i> Level
+                            2</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/user-pages/payments" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-credit-card"></i
+                    ><span class="side-menu__label">Payments</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/otherpages-3/orders" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-shopping-cart"></i
+                    ><span class="side-menu__label">Orders</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/otherpages-3/statements" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-edit"></i
+                    ><span class="side-menu__label">Statements</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/otherpages-3/tips" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-compass"></i
+                    ><span class="side-menu__label"> Safety Tips</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/pages/otherpages-3/settings" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-settings"></i
+                    ><span class="side-menu__label">Settings</span></a
+                  >
+                </li>
+                <li>
+                  <a class="side-menu__item" routerLink="/custom-pages/login" routerLinkActive="active"
+                    ><i class="side-menu__icon fe fe-power"></i
+                    ><span class="side-menu__label">Logout</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="col-xl-9 col-lg-8 col-md-12">
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Settings</h3>
+          </div>
+          <div class="card-body">
+            <div class="settings-tab">
+              <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                <li [ngbNavItem]="1" class="">
+                  <a ngbNavLink class="" data-bs-toggle="tab"
+                    ><i class="icon icon-speedometer"></i> General</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane active show" id="tab1">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label
+                                class="form-label"
+                                id="examplenameInputname2"
+                                >Currency</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <ng-select [searchable]="false" [clearable]="false"
+                                placeholder="Choose a Language..."
+                                class="select2-show-search languages"
+                              >
+                                <ng-option value="0">Choose currency</ng-option>
+                                <ng-option value="1">USD</ng-option>
+                                <ng-option value="2">INR</ng-option>
+                                <ng-option value="3">EUR</ng-option>
+                                <ng-option value="4">GBP</ng-option>
+                              </ng-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label
+                                class="form-label"
+                                id="examplenameInputname3"
+                                >Langague:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <ng-select [searchable]="false" [clearable]="false"
+                                placeholder="Choose a Language..."
+                                class="select2-show-search languages settings-page-dropdown"
+                              >
+                                <ng-option value="AF">Afrikanns</ng-option>
+                                <ng-option value="SQ">Albanian</ng-option>
+                                <ng-option value="AR">Arabic</ng-option>
+                                <ng-option value="HY">Armenian</ng-option>
+                                <ng-option value="EU">Basque</ng-option>
+                                <ng-option value="BN">Bengali</ng-option>
+                                <ng-option value="BG">Bulgarian</ng-option>
+                                <ng-option value="CA">Catalan</ng-option>
+                              </ng-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label">Phone Number:</label>
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked d-md-flex">
+                                <label class="custom-control custom-radio me-4">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios3"
+                                    value="option1"
+                                    checked
+                                  />
+                                  <span class="custom-control-label"
+                                    >Visible to everyone</span
+                                  >
+                                </label>
+                                <label class="custom-control custom-radio">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios3"
+                                    value="option2"
+                                  />
+                                  <span class="custom-control-label"
+                                    >Visible to only my Customers</span
+                                  >
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label" id="inputPassword5"
+                                >Profile:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked d-md-flex">
+                                <label class="custom-control custom-radio me-4">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios4"
+                                    value="option1"
+                                    checked
+                                  />
+                                  <span class="custom-control-label"
+                                    >Visible to everyone</span
+                                  >
+                                </label>
+                                <label class="custom-control custom-radio">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios4"
+                                    value="option2"
+                                  />
+                                  <span class="custom-control-label"
+                                    >Visible to only my Customers</span
+                                  >
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a ngbNavLink class=""
+                    ><i class="icon icon-bubble"></i> Chat</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab2">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label">Font-size:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <div class="custom-controls-stacked d-sm-flex">
+                              <label class="custom-control custom-radio me-4">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios3"
+                                  value="option1"
+                                  checked
+                                />
+                                <span class="custom-control-label">Small</span>
+                              </label>
+                              <label class="custom-control custom-radio me-4">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios3"
+                                  value="option2"
+                                />
+                                <span class="custom-control-label">Medium</span>
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios3"
+                                  value="option2"
+                                />
+                                <span class="custom-control-label">Large</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label">Chat:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <label class="form-switch ps-0">
+                              <input
+                                type="checkbox"
+                                name="form-switch-checkbox"
+                                class="form-switch-input"
+                              />
+                              <span class="form-switch-indicator"></span>
+                              <span class="form-switch-description"
+                                >On/Off</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label">Chat Type:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <div class="custom-controls-stacked d-md-flex">
+                              <label class="custom-control custom-radio me-4">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios4"
+                                  value="option1"
+                                  checked
+                                />
+                                <span class="custom-control-label"
+                                  >Public Chat</span
+                                >
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios4"
+                                  value="option2"
+                                />
+                                <span class="custom-control-label"
+                                  >Private Chat</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label"
+                              >Enable Email Notifications:</label
+                            >
+                          </div>
+                          <div class="col-md-9">
+                            <label class="form-switch ps-0">
+                              <input
+                                type="checkbox"
+                                name="form-switch-checkbox"
+                                class="form-switch-input"
+                              />
+                              <span class="form-switch-indicator"></span>
+                              <span class="form-switch-description"
+                                >On/Off</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label">Back Up Chat:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <label class="form-switch ps-0">
+                              <input
+                                type="checkbox"
+                                name="form-switch-checkbox"
+                                class="form-switch-input"
+                              />
+                              <span class="form-switch-indicator"></span>
+                              <span class="form-switch-description"
+                                >On/Off</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group mb-0">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label class="form-label">Delete Chat:</label>
+                          </div>
+                          <div class="col-md-9">
+                            <div class="custom-controls-stacked d-md-flex">
+                              <label class="custom-control custom-radio me-4">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios5"
+                                  value="option1"
+                                  checked
+                                />
+                                <span class="custom-control-label"
+                                  >Delete Read Chat</span
+                                >
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input
+                                  type="radio"
+                                  class="custom-control-input"
+                                  name="example-radios5"
+                                  value="option2"
+                                />
+                                <span class="custom-control-label"
+                                  >Delete All</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                  <a ngbNavLink class=""
+                    ><i class="icon icon-settings"></i> Advanced</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab3">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label">Auto-Advance:</label>
+                            </div>
+                            <div class="col-md-9">
+                              <label class="form-switch ps-0">
+                                <input
+                                  type="checkbox"
+                                  name="form-switch-checkbox"
+                                  class="form-switch-input"
+                                />
+                                <span class="form-switch-indicator"></span>
+                                <span class="form-switch-description"
+                                  >Enable/Disable</span
+                                >
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label" id="inputEmail4"
+                                >Color Theme:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked d-flex">
+                                <label class="custom-control custom-radio me-4">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios"
+                                    value="option1"
+                                    checked
+                                  />
+                                  <span class="custom-control-label"
+                                    >Light</span
+                                  >
+                                </label>
+                                <label class="custom-control custom-radio">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios"
+                                    value="option2"
+                                  />
+                                  <span class="custom-control-label">Dark</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label">Dashboard Theme:</label>
+                            </div>
+                            <div class="col-md-9">
+                              <ng-select [searchable]="false" [clearable]="false"
+                                placeholder="Choose a Language..."
+                                class="w-100 select2 languages"
+                              >
+                                <ng-option value="1">Default Theme</ng-option>
+                                <ng-option value="2">Light Theme</ng-option>
+                                <ng-option value="3">Dark Theme</ng-option>
+                                <ng-option value="4"
+                                  >Sidebar light Theme</ng-option
+                                >
+                                <ng-option value="5"
+                                  >Sidebar Dark Theme</ng-option
+                                >
+                                <ng-option value="6">RTL</ng-option>
+                              </ng-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label" id="inputEmail5"
+                                >Posted ADs:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked d-md-flex">
+                                <label class="custom-control custom-radio me-4">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios1"
+                                    value="option1"
+                                    checked
+                                  />
+                                  <span class="custom-control-label"
+                                    >Directly</span
+                                  >
+                                </label>
+                                <label class="custom-control custom-radio">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios1"
+                                    value="option2"
+                                  />
+                                  <span class="custom-control-label"
+                                    >By Admin Conformation</span
+                                  >
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label"
+                                >Comments Visible:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <div class="custom-controls-stacked d-md-flex">
+                                <label class="custom-control custom-radio me-4">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios2"
+                                    value="option1"
+                                    checked
+                                  />
+                                  <span class="custom-control-label"
+                                    >Directly</span
+                                  >
+                                </label>
+                                <label class="custom-control custom-radio">
+                                  <input
+                                    type="radio"
+                                    class="custom-control-input"
+                                    name="example-radios2"
+                                    value="option2"
+                                  />
+                                  <span class="custom-control-label"
+                                    >By Admin Conformation</span
+                                  >
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label"
+                                >System Notification:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <label
+                                class="form-switch d-inline-block me-5 ps-0"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="form-switch-checkbox"
+                                  class="form-switch-input"
+                                />
+                                <span class="form-switch-indicator"></span>
+                                <span class="form-switch-description"
+                                  >On/Off</span
+                                >
+                              </label>
+                              <label class="form-switch d-inline-block"
+                                ><a
+                                  href="javascript:void(0);"
+                                  class="btn ripple -link"
+                                  >Itemsd Another Settings</a
+                                ></label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label"
+                                >Mail Notification:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <label
+                                class="form-switch d-inline-block me-5 ps-0"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="form-switch-checkbox"
+                                  class="form-switch-input"
+                                />
+                                <span class="form-switch-indicator"></span>
+                                <span class="form-switch-description"
+                                  >On/Off</span
+                                >
+                              </label>
+                              <label class="form-switch d-inline-block"
+                                ><a
+                                  href="javascript:void(0);"
+                                  class="btn ripple -link"
+                                  >Itemsd Another Settings</a
+                                ></label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <label class="form-label"
+                                >Auto Watch Comments:</label
+                              >
+                            </div>
+                            <div class="col-md-9">
+                              <label
+                                class="form-switch d-inline-block me-5 ps-0"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="form-switch-checkbox"
+                                  class="form-switch-input"
+                                />
+                                <span class="form-switch-indicator"></span>
+                                <span class="form-switch-description"
+                                  >On/Off</span
+                                >
+                              </label>
+                              <label class="form-switch d-inline-block"
+                                ><a
+                                  href="javascript:void(0);"
+                                  class="btn ripple -link"
+                                  >Itemsd Another Settings</a
+                                ></label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+              <div class="tab-content" [ngbNavOutlet]="nav"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="btn-list">
+              <a href="javascript:void(0);" class="btn ripple btn-primary"
+                >Save Changes</a
+              >
+              <a href="javascript:void(0);" class="btn ripple btn-secondary"
+                >Cancel</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!-- /Onlinesletter-->

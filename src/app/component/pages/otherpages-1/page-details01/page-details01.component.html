@@ -1,0 +1,850 @@
+ <app-bannering2
+  [title]="'Details1'"
+  [items]="['Pages', 'Other-Pages']"
+></app-bannering2>
+
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-8 col-md-12">
+        <div class="card overflow-hidden">
+          <div class="card-body boot-slider">
+            <div class="item-det mb-4">
+              <a href="javascript:void(0);" class="text-dark"
+                ><h2 class="fs-22">
+                  Bioplex - Beauty & Spa Creative Wordpress Template
+                </h2></a
+              >
+              <div class="d-flex">
+                <ul class="d-flex">
+                  <li class="me-5">
+                    <a href="javascript:void(0);" class="icons"
+                      ><i class="fe fe-briefcase text-muted me-1"></i>
+                      Wordpress</a
+                    >
+                  </li>
+                  <li class="me-5">
+                    <a href="javascript:void(0);" class="icons"
+                      ><i class="fe fe-calendar text-muted me-1"></i> 5 hours
+                      ago</a
+                    >
+                  </li>
+                  <li class="me-5">
+                    <a href="javascript:void(0);" class="icons"
+                      ><i class="fe fe-eye text-muted me-1"></i> 765</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="marketplace-single-imag mx-auto text-center">
+              <div
+                id="carousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-loop="false"
+                data-bs-wrap="false"
+                data-bs-play="true"
+                data-bs-thumb="true"
+                data-bs-touch="true"
+              >
+              <div class="ngkeen-slider">
+                      <svg [ngClass]="'arrow arrow--left ' + (currentSlide === 0 ? 'arrow--disabled' : '')" (click)="slider.prev()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="primoslider-icon primoslider-chevron-left"> <polyline points="15 18 9 12 15 6"></polyline> </svg>
+                    </div>
+
+              <div *ngIf="slider" class="ngkeen-slider">
+                      <svg [ngClass]="'arrow arrow--right ' +(slider.track.details.slides.length - 1 === currentSlide? 'arrow--disabled': '')" (click)="slider.next()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="primoslider-icon primoslider-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg>
+               </div>
+                <div class="slide-show-image gallery-wrapper">
+                  <div class="keen-slider" #sliderRef>
+                    <div class="keen-slider__slide number-slide1">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide2">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide3">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide4">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide5">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide6">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide7">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide8">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide9">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide10">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide11">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide12">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide13">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide14">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide15">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide16">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                  </div>
+                  <div class="keen-slider thumbnail" #thumbnailRef>
+                    <div class="keen-slider__slide number-slide1">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide2">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide3">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide4">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide5">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide6">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide7">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide8">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide9">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide10">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide11">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide12">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide13">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide14">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide15">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide16">
+                      <div class="carousel-item active"> <img loading="lazy" src="../assets/images/media/pictures/thumb-list/thumb-9.jpg" alt="img"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 border btn-list mt-4">
+                <a
+                  href="javascript:void(0);"
+                  class="btn ripple btn-primary mb-lg-0"
+                  ><i class="fe fe-airplay d-inline-flex me-1"></i> Live
+                  Preview</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  class="btn ripple btn-outline-primary mb-lg-0"
+                  ><i class="fe fe-heart d-inline-flex me-1"></i> Add to
+                  Favorites</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  class="btn ripple btn-outline-gray mb-lg-0"
+                  ><i class="fa fa-folder-open-o me-1 d-inline-flex"></i> Add to
+                  Collection</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Marketplace Content-->
+        <!--Description-->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Description</h3>
+          </div>
+          <div class="card-body">
+            <div class="mb-0">
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atcorrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt
+                mollitia animi, id est laborum et dolorum fuga.
+              </p>
+              <p class="">
+                On the other hand, we denounce with righteous indignation and
+                dislike men who are so beguiled and demoraliz the charms of
+                pleasure of the moment, so blinded by desire, that they cannot
+                foresee the pain and trouble thena bound to ensue; and equal
+                blame belongs to those who fail in their duty through weakness
+                of will, which is the same as saying through shrinking from toil
+                and pain.
+              </p>
+            </div>
+            <h4 class="card-title mb-3">Features</h4>
+            <div class="row">
+              <div class="col-xl-6 col-md-6">
+                <ul class="list-unstyled widget-spec mb-0">
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i
+                    >HTML Pages
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Plugins
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Light &amp; Dark Versions
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Realtime Project Work
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    More Maps
+                  </li>
+                  <li class="mb-xl-0">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Edittable Text
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <ul class="list-unstyled widget-spec mb-0">
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Message Chat
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Mail Inbox
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Icons Set
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Error Pages
+                  </li>
+                  <li class="">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Pricing Tabels
+                  </li>
+                  <li class="mb-0">
+                    <i class="typcn typcn-chevron-right-outline text-muted"></i>
+                    Shoping Cart
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="list-id">
+              <div class="row">
+                <div class="col">
+                  <a class="mb-0">Marketplace ID : #8562354</a>
+                </div>
+                <div class="col col-auto">
+                  Posted By <a class="mb-0">Individual</a> / 19th Nov 2019
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="icons">
+              <a
+                href="javascript:void(0);"
+                class="btn ripple btn-info icons me-1"
+                ><i class="fe fe-share-2 me-1"></i> Share Ad</a
+              >
+              <a
+                href="javascript:void(0);"
+                class="btn ripple btn-secondary icons me-1"
+                data-bs-toggle="modal"
+                data-bs-target="#report"
+                (click)="open(content)"
+                ><i class="icon icon-exclamation me-1"></i> Report Abuse</a
+              >
+              <a
+                href="javascript:void(0);"
+                class="btn ripple btn-primary icons me-1"
+                ><i class="fe fe-heart me-1"></i> 678</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Description-->
+
+        <div class="border-0 mb-5 mb-xl-0">
+          <div class="wideget-user-tab wideget-user-tab3">
+            <div class="tab-menu-heading">
+              <div class="tabs-menu1">
+                <ul ngbNav #nav="ngbNav" class="nav">
+                  <li [ngbNavItem]="1" class="">
+                    <a ngbNavLink>Ratings & Reviews </a>
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane active" id="tab-1">
+                        <div
+                          class="border-start border-end p-5 bg-white border-bottom br-bs-3 br-be-3"
+                        >
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card shadow-none">
+                                <div class="card-header bg-light shadow-none">
+                                  <div class="rating-stars d-flex">
+                                    <input
+                                      type="number"
+                                      readonly="readonly"
+                                      class="rating-value star"
+                                      name="rating-stars-value"
+                                      value="4"
+                                    />
+                                    <div class="d-inline-flex">
+                                      <ngb-rating
+                                        class="text-warning"
+                                        [(rate)]="currentRate"
+                                        [max]="5"
+                                      ></ngb-rating>
+                                    </div>
+                                  </div>
+                                  <div class="card-options">
+                                    <span class=""
+                                      >by
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-primary"
+                                        >Socrates</a
+                                      >
+                                      <span class="text-muted ms-2"
+                                        >2 days ago</span
+                                      ></span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <h4 class="dark-grey-text mb-2">
+                                    Design Quality
+                                  </h4>
+                                  <p
+                                    class="font-weight-normal dark-grey-text mb-0"
+                                  >
+                                    Excellent design that breaksaway from the
+                                    cliche bootstrap sites that are a
+                                    dime-a-dozen these days.
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="card shadow-none">
+                                <div class="card-header bg-light shadow-none">
+                                  <div class="rating-stars d-flex">
+                                    <input
+                                      type="number"
+                                      readonly="readonly"
+                                      class="rating-value star"
+                                      name="rating-stars-value"
+                                      value="4"
+                                    />
+                                    <div class="d-inline-flex">
+                                      <ngb-rating
+                                        class="text-warning"
+                                        [(rate)]="currentRate"
+                                        [max]="5"
+                                      ></ngb-rating>
+                                    </div>
+                                  </div>
+                                  <div class="card-options">
+                                    <span class="ms-auto"
+                                      >by
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-primary"
+                                        >Joyce Chua</a
+                                      >
+                                      <span class="text-muted ms-2"
+                                        >2 months ago</span
+                                      ></span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <h4 class="dark-grey-text mb-2">
+                                    Design Quality
+                                  </h4>
+                                  <p
+                                    class="font-weight-normal dark-grey-text mb-0"
+                                  >
+                                    Awesome code quality
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="card shadow-none">
+                                <div class="card-header bg-light shadow-none">
+                                  <div class="rating-stars d-flex">
+                                    <input
+                                      type="number"
+                                      readonly="readonly"
+                                      class="rating-value star"
+                                      name="rating-stars-value"
+                                      value="3"
+                                    />
+                                    <div class="d-inline-flex">
+                                      <ngb-rating
+                                        class="text-warning"
+                                        [(rate)]="currentRate"
+                                        [max]="5"
+                                      ></ngb-rating>
+                                    </div>
+                                  </div>
+                                  <div class="card-options">
+                                    <span class=""
+                                      >by
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-primary"
+                                        >Sonia Fraser</a
+                                      >
+                                      <span class="text-muted ps-2"
+                                        >3 months ago</span
+                                      ></span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <h4 class="dark-grey-text mb-2">
+                                    Design Quality
+                                  </h4>
+                                  <p
+                                    class="font-weight-normal dark-grey-text mb-0"
+                                  >
+                                    Good design & clean commented code. Before
+                                    purchase technical team very fast response
+                                    direct email support.
+                                  </p>
+                                </div>
+                                <div class="card-body bg-light">
+                                  <div class="media mt-0 mb-0">
+                                    <div class="d-flex me-3">
+                                      <a href="javascript:void(0);"
+                                        ><img
+                                          class="media-object brround"
+                                          alt="64x64"
+                                          src="./assets/images/users/male/1.jpg"
+                                        />
+                                      </a>
+                                    </div>
+                                    <div class="media-body">
+                                      <h4 class="mt-0 mb-1">Joanne Scott</h4>
+                                      <p class="fs-15 mb-0 mt-2">
+                                        Hey Thank You So Much
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card shadow-none">
+                                <div class="card-header bg-light shadow-none">
+                                  <div class="rating-stars d-flex">
+                                    <input
+                                      type="number"
+                                      readonly="readonly"
+                                      class="rating-value star"
+                                      name="rating-stars-value"
+                                      value="2"
+                                    />
+                                    <div class="d-inline-flex">
+                                      <ngb-rating
+                                        class="text-warning"
+                                        [(rate)]="currentRate"
+                                        [max]="5"
+                                      ></ngb-rating>
+                                    </div>
+                                  </div>
+                                  <div class="card-options">
+                                    <span class=""
+                                      >by
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-primary"
+                                        >Owen Bongcaras</a
+                                      >
+                                      <span class="text-muted ms-2"
+                                        >2 months ago</span
+                                      ></span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <h4 class="dark-grey-text mb-2">
+                                    Design Quality
+                                  </h4>
+                                  <p
+                                    class="font-weight-normal dark-grey-text mb-0"
+                                  >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="card shadow-none">
+                                <div class="card-header bg-light shadow-none">
+                                  <div class="rating-stars d-flex">
+                                    <input
+                                      type="number"
+                                      readonly="readonly"
+                                      class="rating-value star"
+                                      name="rating-stars-value"
+                                      value="3"
+                                    />
+                                    <div class="d-inline-flex">
+                                      <ngb-rating
+                                        class="text-warning"
+                                        [(rate)]="currentRate"
+                                        [max]="5"
+                                      ></ngb-rating>
+                                    </div>
+                                  </div>
+                                  <div class="card-options">
+                                    <span class=""
+                                      >by
+                                      <a
+                                        href="javascript:void(0);"
+                                        class="text-primary"
+                                        >Justin Gray</a
+                                      >
+                                      <span class="text-muted ms-2"
+                                        >2 years ago</span
+                                      ></span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <h4 class="dark-grey-text mb-2">
+                                    Design Quality
+                                  </h4>
+                                  <p
+                                    class="font-weight-normal dark-grey-text mb-0"
+                                  >
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit.
+                                  </p>
+                                </div>
+                              </div>
+                              <ul class="pagination">
+                                <li class="page-item page-prev disabled">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    tabindex="-1"
+                                    >Prev</a
+                                  >
+                                </li>
+                                <li class="page-item active">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >1</a
+                                  >
+                                </li>
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >2</a
+                                  >
+                                </li>
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >3</a
+                                  >
+                                </li>
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >4</a
+                                  >
+                                </li>
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >5</a
+                                  >
+                                </li>
+                                <li class="page-item page-next">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:void(0);"
+                                    >Next</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mt-5 mb-xl-0">
+                          <div class="card-header">
+                            <h3 class="card-title">Item Rating</h3>
+                          </div>
+                          <div class="card-body">
+                            <div class="rating-stars d-flex mb-3">
+                              <label class="form-label me-3 mt-1"
+                                >Select Rating:</label
+                              >
+                              <input
+                                type="number"
+                                readonly="readonly"
+                                class="rating-value star"
+                                name="rating-stars-value"
+                                value="3"
+                              />
+                              <div class="d-inline-flex">
+                                <ngb-rating
+                                  class="text-warning mt-1"
+                                  [(rate)]="currentRate"
+                                  [max]="5"
+                                ></ngb-rating>
+                              </div>
+                            </div>
+                            <div class="form-group reviewselect">
+                              <ng-select [searchable]="false" [clearable]="false"
+                                class="select2"
+                                placeholder="Select-option "
+                              >
+                                <ng-option value="0"
+                                  >Selectng-Options</ng-option
+                                >
+                                <ng-option value="1"
+                                  >Customer Support</ng-option
+                                >
+                                <ng-option value="2">Design Quality</ng-option>
+                                <ng-option value="3">Other</ng-option>
+                              </ng-select>
+                            </div>
+                            <div class="form-group">
+                              <textarea
+                                class="form-control"
+                                name="example-textarea-input"
+                                rows="6"
+                                placeholder="Comment"
+                              ></textarea>
+                            </div>
+                            <a
+                              href="javascript:void(0);"
+                              class="btn ripple btn-primary"
+                              >Save</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </li>
+                  <li [ngbNavItem]="2">
+                    <a ngbNavLink href="#tab-2" data-bs-toggle="tab" class=""
+                      >Comments</a
+                    >
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="tab-2">
+                        <div
+                          class="border-start border-end p-5 bg-white border-bottom br-bs-3 br-be-3"
+                        >
+                          <div class="card shadow-none">
+                            <div class="card-body" *ngFor="let card of data">
+                              <div>
+                                <div class="media mt-0">
+                                  <img
+                                    class="me-3 bg-light"
+                                    [src]="card.src"
+                                    alt="Image description"
+                                  />
+                                  <div class="media-body">
+                                    <div class="d-md-flex align-items-center">
+                                      <h4 class="mb-2">
+                                        {{ card.name }}
+                                      </h4>
+                                      <small class="text-muted ms-md-auto"
+                                        ><i class="fe fe-calendar me-1"></i
+                                        >{{ card.date }}</small
+                                      >
+                                    </div>
+                                    <app-message-modal></app-message-modal>
+                                    <app-comment-modal></app-comment-modal>
+                                    <app-report-modal></app-report-modal>
+                                  </div>
+                                </div>
+                                <p class="fs-15 mb-0 mt-3">
+                                  {{ card.summery }}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mt-5 mb-xl-0">
+                          <div class="card-header">
+                            <h3 class="card-title">Write Your Comments</h3>
+                          </div>
+                          <div class="card-body">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="name1"
+                                placeholder="Your Name"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Email address"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <textarea
+                                class="form-control"
+                                name="example-textarea-input"
+                                rows="6"
+                                placeholder="Write Your Comment"
+                              ></textarea>
+                            </div>
+                            <a
+                              href="javascript:void(0);"
+                              class="btn ripple btn-primary"
+                              >Submit</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-content details-tab-content"
+            [ngbNavOutlet]="nav"
+          ></div>
+        </div>
+        <!--/Comments-->
+      </div>
+      <!--Right Side Content-->
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <app-pagedetails-sidebar></app-pagedetails-sidebar>
+      </div>
+      <!--Rightside Content-->
+    </div>
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->
+
+<!-- Report Modal -->
+<ng-template #content let-modal>
+  <!-- <div class="modal"  id="report" tabindex="-1" > -->
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="examplereportLongTitle">Report Abuse</h5>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="report-name"
+            placeholder="Enter url"
+          />
+        </div>
+        <div class="form-group">
+          <ng-select [searchable]="false" [clearable]="false" name="country" id="select-countries2" class=" ">
+            <ng-option value="1" selected>Categories</ng-option>
+            <ng-option value="2">IT Itemsm</ng-option>
+            <ng-option value="3">Identity Theft</ng-option>
+            <ng-option value="4">Online Shopping Fraud</ng-option>
+            <ng-option value="5">Service Providers</ng-option>
+            <ng-option value="6">Phishing</ng-option>
+            <ng-option value="7">Spyware</ng-option>
+          </ng-select>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="report-email"
+            placeholder="Email address"
+          />
+        </div>
+        <div class="form-group mb-0">
+          <textarea
+            class="form-control"
+            name="example-textarea-input"
+            rows="6"
+            placeholder="Message"
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn ripple btn-danger"
+          data-bs-dismiss="modal"
+          (click)="modal.dismiss('Cross click')"
+        >
+          Cancel
+        </button>
+        <button type="button" class="btn ripple btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+  <!-- </div> --> </ng-template
+><!-- /Report Modal -->

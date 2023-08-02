@@ -1,0 +1,92 @@
+<app-bannering1
+  [title]="'Statements'"
+  [items]="['Pages', 'Statements']"
+></app-bannering1>
+
+<!--User dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-12">
+        <app-sidebar-dashboard></app-sidebar-dashboard>
+      </div>
+      <div class="col-xl-9 col-lg-8 col-md-12">
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Statements List</h3>
+          </div>
+          <div class="table-responsive statement-card">
+            <table
+              class="table card-table table-vcenter text-nowrap border-bottom"
+            >
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Author</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of Statamentdata">
+                  <td>
+                    <a
+                      routerLink="/pages/otherpages-1/invoice"
+                      class="text-primary"
+                      >{{ data.id }}</a
+                    >
+                  </td>
+                  <td>{{ data.Category }}</td>
+                  <td>{{ data.Date }}</td>
+                  <td class="font-weight-semibold fs-16">{{ data.author }}</td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-success">{{
+                      data.type
+                    }}</a>
+                  </td>
+                  <td class="font-weight-semibold fs-18">{{ data.Price }}</td>
+                  <td>
+                    <a href="javascript:void(0);" class="badge bg-danger">{{
+                      data.Action
+                    }}</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-body">
+            <ul class="pagination">
+              <li class="page-item page-prev disabled">
+                <a class="page-link" href="javascript:void(0);" tabindex="-1"
+                  >Prev</a
+                >
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0);">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">3</a>
+              </li>
+              <li class="page-item page-next">
+                <a class="page-link" href="javascript:void(0);">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User dashboard-->
+
+<!--Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--Onlinesletter-->

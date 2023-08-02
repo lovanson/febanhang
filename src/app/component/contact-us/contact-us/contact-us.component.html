@@ -1,0 +1,176 @@
+<!--Section-->
+<app-bannering
+  [title]="'Contact'"
+  [items]="['Home', 'Contact']"
+></app-bannering>
+<!--Contact-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-xl-4 col-md-6 py-2">
+        <div class="">
+          <div
+            class="cover-image contact-bg rounded-3"
+            src="./assets/images/patterns/5.png" style="background: url('./assets/images/patterns/5.png') center center;"
+          >
+            <div class="card-header bg-transparent d-grid py-4 border-bottom-0">
+              <h3 class="card-title">Contact Information</h3>
+              <span class="text-white"
+                >Fill up the Form our team will be get back to you</span
+              >
+            </div>
+            <div class="card-body border-top">
+              <div class="conatct-list">
+                <a href="javascript:void(0);" class="media mt-0 mb-6">
+                  <div class="media-icon">
+                    <i class="fe fe-phone"></i>
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-1 fs-16">+68 872-627-9735</h6>
+                    <small class="fs-13">Free Support!</small>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="media mb-6">
+                  <div class="media-icon">
+                    <i class="fe fe-clock"></i>
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-1 fs-16">Mon-Sat(10:00-19:00)</h6>
+                    <small class="fs-13">Working Hours!</small>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="media mb-6">
+                  <div class="media-icon">
+                    <i class="fe fe-map-pin"></i>
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-1 fs-16">872 School Street Opa , TN 377</h6>
+                    <small class="fs-13">New York, USA</small>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="media mb-4">
+                  <div class="media-icon">
+                    <i class="fe fe-mail"></i>
+                  </div>
+                  <div class="media-body">
+                    <h6 class="mt-1 fs-16">yourdomain@gmail.com</h6>
+                    <small class="fs-13">Support us!</small>
+                  </div>
+                </a>
+              </div>
+              <div class="icons d-flex py-3 mt-6">
+                <a
+                  aria-label="instagram"
+                  href="javascript:void(0);"
+                  class="me-3 conatct-list-icon"
+                  ><i class="fe fe-instagram fs-15 text-light"></i
+                ></a>
+                <a
+                  aria-label="facebook"
+                  href="javascript:void(0);"
+                  class="me-3 conatct-list-icon"
+                  ><i class="fe fe-facebook fs-15 text-light"></i
+                ></a>
+                <a
+                  aria-label="twitter"
+                  href="javascript:void(0);"
+                  class="me-3 conatct-list-icon"
+                  ><i class="fe fe-twitter fs-15 text-light"></i
+                ></a>
+                <a
+                  aria-label="linkedin"
+                  href="javascript:void(0);"
+                  class="me-3 conatct-list-icon"
+                  ><i class="fe fe-linkedin fs-15 text-light"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-7 col-md-6 py-2">
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Contact Us</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="exampleInputEmail1"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name1"
+                    placeholder="First Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="exampleInputEmail1"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name2"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail5"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4" class="form-label"
+                  >Phone-Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputPassword4"
+                  placeholder="Phone-Number"
+                />
+              </div>
+              <div class="form-group col-md-12">
+                <textarea
+                  class="form-control"
+                  name="example-textarea-input"
+                  rows="6"
+                  placeholder="Message..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="text-end">
+              <a href="javascript:void(0);" class="btn ripple btn-primary"
+                >Send Message</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Conatct -->
+<!--Map-->
+<div>
+  <div class="map1 mb-0">
+    <div
+      class="map-header-layer h-400"
+      id="map2"
+      leaflet
+      [leafletOptions]="options1"
+    ></div>
+  </div>
+</div>
+<!--/Map-->

@@ -1,0 +1,99 @@
+<owl-carousel-o [options]="customOptions" class="">
+  <ng-container *ngFor="let slide of slidesStore">
+    <ng-template carouselSlide [id]="slide.id">
+      <div class="slide">
+        <div class="item">
+          <div class="card mb-0">
+            <div class="power-ribbon power-ribbon-top-left text-warning">
+              <span class="bg-warning"><i class="fa fa-bolt"></i></span>
+            </div>
+            <div class="item-card2-tans" >
+              <div class="item-card7-imgs">
+                <a routerLink="/pages/otherpages-1/page-details"></a>
+                <img [src]="slide.src" />
+                <div class="tag-text">
+                  <span class="bg-dark-transparent tag-option">{{slide.tag}}</span>
+                </div>
+              </div>
+              <div class="item-card2-icons">
+                <a routerLink="/pages/otherpages-3/orders"
+                  class="bg-primary"
+                  ngbTooltip="{{ slide.tooltip1 }}"
+                  placement="top"
+                  ><i class="fe fe-heart"></i
+                ></a>
+                <a
+                  routerLink="/pages/otherpages-3/carts"
+                  class="bg-secondary"
+                  ngbTooltip="{{ slide.tooltip2 }}"
+                  placement="top"
+                  ><i class="fe fe-shopping-cart"></i
+                ></a>
+                <a
+                  routerLink="/pages/otherpages-1/page-details"
+                  class="bg-info"
+                  ngbTooltip="{{ slide.tooltip3 }}"
+                  placement="top"
+                  ><i class="fe fe-eye"></i
+                ></a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="item-card7-desc">
+                <div class="item-card7-text">
+                  <a
+                    routerLink="/pages/otherpages-1/page-details"
+                    class="text-dark"
+                    ><h4 class="font-weight-semibold">{{ slide.title }}</h4></a
+                  >
+                  <p class="fs-13 mb-1 text-muted">
+                    {{ slide.summary }}
+                  </p>
+                </div>
+                <div class="d-md-flex">
+                  <div class="d-inline-flex align-items-center">
+                    <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   {{currentRate}}
+                  </div>
+                  <div class="ms-auto mt-auto">
+                    <div class="item-card9-cost">
+                      <h4 class="mb-0">{{ slide.price }}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer pt-3">
+              <div class="footerimg d-flex mt-0 mb-0">
+                <div class="d-flex align-items-center footerimg-l mb-0">
+                  <img
+                    src="{{ slide.image }}"
+                    alt="image"
+                    class="avatar avatar-sm brround me-2"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="time-title text-muted p-0 leading-normal"
+                    >{{ slide.name
+                    }}<i
+                      class="si si-check text-success fs-12 ms-1"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="verified"
+                    ></i
+                  ></a>
+                </div>
+                <div class="footerimg-r ms-auto">
+                  <span class="text-muted d-inline-flex align-items-center"
+                    ><i class="fe fe-shopping-cart me-1"></i> {{ slide.sale }}</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </ng-template
+    >
+  </ng-container>
+</owl-carousel-o>

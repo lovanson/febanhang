@@ -1,0 +1,24 @@
+<app-bannering
+  [title]="'Blog List'"
+  [items]="['Home', 'Blog', 'Blog-List']"
+></app-bannering>
+
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-12 col-md-12 d-block mx-auto">
+        <!--Itemsd Lists-->
+        <app-blog-list></app-blog-list>
+      </div>
+      <!--/Lists-->
+    </div>
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

@@ -1,0 +1,142 @@
+<app-bannering1 [title]="'Cart'" [items]="['Pages', 'Cart']"></app-bannering1>
+<!--User dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card cart mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Shopping Cart</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table
+                class="table table-bordered table-vcenter text-nowrap border-top"
+              >
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th class="w-25">Quantity</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cart of productdata">
+                    <td>
+                      <img [src]="cart.Product" alt="" class="h-8 br-4" />
+                    </td>
+                    <td>{{ cart.Title }}</td>
+                    <td class="font-weight-bold fs-16">{{ cart.Price }}</td>
+                    <td>
+                      <div class="input-group input-indec flex-nowrap">
+                        <span class="input-group-btn">
+                          <button
+                            aria-label="Name"
+                            class="quantity-left-minus btn btn-light btn-number br-0"
+                            (click)="decrement(cart)"
+                            data-bs-type="minus"
+                          >
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </span>
+                        <input
+                          type="text"
+                          id="quantity"
+                          name="quantity"
+                          class="form-control input-number text-center"
+                          value="{{ cart.counter }}"
+                        />
+                        <span class="input-group-btn">
+                          <button
+                            aria-label="Name"
+                            class="quantity-right-plus btn btn-light btn-number br-0"
+                            (click)="increment(cart)"
+                            data-bs-type="plus"
+                            data-bs-field=""
+                          >
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <a
+                        class="btn btn-danger btn-sm me-2"
+                        ngbTooltip="Save for Washlist"
+                        placement="top"
+                        ><i class="icon icon-heart"></i
+                      ></a>
+                      <a
+                        class="btn btn-info btn-sm"
+                        ngbTooltip="Remove"
+                        placement="top"
+                        ><i class="icon icon-trash"></i
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-6">
+                <input
+                  class="productcart form-control"
+                  type="text"
+                  placeholder="Coupon Code"
+                />
+              </div>
+              <div class="col-6">
+                <a href="javascript:void(0);" class="btn btn-primary btn-md"
+                  >Apply Coupon</a
+                >
+              </div>
+            </div>
+            <br />
+            <div class="mt-3">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Sub Total
+                  <span class="badgetext h4 font-weight-bold mb-0">$68.00</span>
+                </li>
+                <li class="list-group-item">
+                  Discount
+                  <span class="badgetext h4 font-weight-bold mb-0">2%</span>
+                </li>
+                <li class="list-group-item">
+                  Shipping
+                  <span class="badgetext h4 font-weight-normal mb-0">Free</span>
+                </li>
+                <li class="list-group-item">
+                  Total
+                  <span class="badgetext h4 font-weight-bold1 fs-22 mb-0"
+                    >$48.00</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer text-end">
+            <a href="javascript:void(0);" class="btn btn-primary m-1"
+              ><i class="fa fa-arrow-left me-1"></i>Continue Shopping</a
+            >
+            <a
+              routerLink="/pages/otherpages-3/checkout"
+              class="btn btn-success m-1"
+              >Check out<i class="fa fa-arrow-right ms-1"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

@@ -1,0 +1,28 @@
+<app-bannering
+  [title]="'Blog-Grid'"
+  [items]="['Home', 'Blog','Blog-Grid']"
+></app-bannering>
+
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <!--Leftside Content-->
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <app-blog-search></app-blog-search>
+      </div>
+      <!--/Leftside Content-->
+      <div class="col-xl-8 col-lg-8 col-md-12">
+        <app-blog-grid></app-blog-grid>
+      </div>
+      <!--/Itemsd Lists-->
+    </div>
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

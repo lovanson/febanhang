@@ -1,0 +1,96 @@
+<app-bannering1
+  [title]="'Orders'"
+  [items]="['Pages', 'Orders']"
+></app-bannering1>
+
+<!--User dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-12 col-md-12">
+        <app-sidebar-dashboard></app-sidebar-dashboard>
+      </div>
+      <div class="col-xl-9 col-lg-12 col-md-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <img
+              src="./assets/images/svg/order.svg"
+              class="floating mb-7 w-20"
+              alt="img"
+            />
+            <h2 class="font-weight-normal">Thank You For Our Order!</h2>
+            <h4 class="mb-2 text-default">Order Confirmation</h4>
+            <p class="mb-0 text-muted">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, Sed ut perspiciatis unde omnis
+              iste natus error sit voluptatem accusantium doloremque laudantium,
+              totam rem aperiam totam rem aperiam
+            </p>
+            <a class="btn ripple btn-primary mt-4" href="javascript:void(0);"
+              >Download Product</a
+            >
+          </div>
+        </div>
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Orders List</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of Orderdata">
+                    <td class="text-primary">{{ data.id }}</td>
+                    <td>{{ data.Category }}</td>
+                    <td>{{ data.Date }}</td>
+                    <td class="fs-16">{{ data.Price }}</td>
+                    <td>
+                      <a href="javascript:void(0);" class="badge bg-danger">{{
+                        data.Action
+                      }}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="pagination">
+              <li class="page-item page-prev disabled">
+                <a class="page-link" href="javascript:void(0);" tabindex="-1"
+                  >Prev</a
+                >
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0);">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">3</a>
+              </li>
+              <li class="page-item page-next">
+                <a class="page-link" href="javascript:void(0);">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User dashboard-->
+
+<!--Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--Onlinesletter-->

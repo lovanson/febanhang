@@ -1,0 +1,47 @@
+	<div class="table-responsive">
+		<table class="table table-bordered table-vcenter text-nowrap border-top mb-0 bg-white">
+												<thead>
+													<tr>
+														<th>Name & Details</th>
+														<th>Price</th>
+														<th>Status</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr *ngFor="let table of data">
+														<td>
+														<div class="d-flex">
+															<label class="custom-control form-checkbox me-3">
+																<input type="checkbox" class="custom-control-input" name="checkbox" value="checkbox">
+																<span class="custom-control-label"></span>
+															</label>
+															<div class="media mt-0 mb-0">
+																<div class="card-aside-img">
+																	<a href="javascript:void(0);"></a>
+																	<img [src]="table.src" alt="img" class="br-4">
+																</div>
+																<div class="media-body">
+																	<div class="card-item-desc ms-4 p-0">
+																		<a href="javascript:void(0);" class="text-dark"><h4 class="text-over">{{table.title}}</h4></a>
+																		<div class="text-muted"><i class="fa fa-clock-o me-1"></i>{{table.date}}</div>
+																		<div class="text-muted"><i class="fa fa-tag me-1"></i>{{table.tag}}</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														</td>
+														<td class="font-weight-bold fs-16">{{table.price}}</td>
+														<td >
+															<a href="javascript:void(0);" class="badge bg-primary">{{table.status}}</a>
+														</td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn ripple  btn-secondary btn-sm text-white" ngbTooltip="Edit" placement="top"><i class="fa fa-pencil"></i></a>
+																<a class="btn ripple  btn-info btn-sm text-white" ngbTooltip="Delete" placement="top"><i class="fa fa-trash-o"></i></a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+	</div>

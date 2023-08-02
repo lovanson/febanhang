@@ -1,0 +1,19 @@
+::ng-deep{
+  .owl-controls .owl-page  {
+          display: inline-block;
+          zoom: 1;
+      }
+              .owl-controls .owl-page {
+                  width: 70px;
+                  height: 70px;
+                  border-radius: 50px;
+                  border: 4px solid #d9d6e0;
+                  background-size: cover;
+                  transition: all 0.3s ease-in-out 0s;
+                  position: relative;
+              }
+  .slideimg{
+      border-radius: 50% !important;
+  }
+
+}

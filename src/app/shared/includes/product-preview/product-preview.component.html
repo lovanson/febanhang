@@ -1,0 +1,17 @@
+<div class="row row-sm justify-content-center">
+  <div *ngFor="let album of albums; let i = index" (click)="openProdect(i)" class="col-3 col-md-2 col-lg-1" gallerize>
+    <a
+      href="javascript:void(0)"
+      class="d-block link-overlay mb-2 shadow br-3 overflow-hidden"
+    >
+      <img
+        class="d-block img-fluid mx-auto text-center w-100"
+        [src]="album.src"
+        alt="Image {{i + 1}}"
+      />
+      <span class="link-overlay-bg rounded">
+        <i class="fa fa-search"></i>
+      </span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,251 @@
+<app-bannering1
+  [title]="'Payments'"
+  [items]="['Pages', 'Payments']"
+></app-bannering1>
+
+<!--User dashboard-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-12">
+         <app-sidebar-dashboard></app-sidebar-dashboard>
+      </div>
+      <div class="col-xl-9 col-lg-8 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Payment Method</h3>
+          </div>
+          <div class="card-body">
+            <div class="card-pay">
+              <ul ngbNav #nav="ngbNav" class="tabs-menu nav">
+                <li [ngbNavItem]="1" class="">
+                  <a ngbNavLink href="#tab1" class="" data-bs-toggle="tab"
+                    ><i class="fa fa-credit-card"></i> Credit Card</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane active show" id="tab1">
+                      <div class="form-group">
+                        <label class="form-label">CardHolder Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name1"
+                          placeholder="First Name"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Card number</label>
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search for..."
+                          />
+                          <span class="">
+                            <button class="btn ripple btn-info" type="button">
+                              <i class="fa fa-cc-visa"></i> &nbsp;
+                              <i class="fa fa-cc-amex"></i> &nbsp;
+                              <i class="fa fa-cc-mastercard"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <div class="form-group">
+                            <label class="form-label">Expiration</label>
+                            <div class="input-group">
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="MM"
+                                name="expire-month"
+                              />
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="YY"
+                                name="expire-year"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="form-label"
+                              >CVV <i class="fa fa-question-circle"></i
+                            ></label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              required=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="javascript:void(0);"
+                        class="btn ripple btn-primary"
+                        >Submit</a
+                      >
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                  <a ngbNavLink data-bs-toggle="tab" class=""
+                    ><i class="fa fa-paypal"></i> Paypal</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab2">
+                      <h6 class="font-weight-semibold">
+                        Paypal is easiest way to pay online
+                      </h6>
+                      <p>
+                        <a
+                          href="javascript:void(0);"
+                          class="btn ripple btn-primary"
+                          ><i class="fa fa-paypal"></i> Log in my Paypal</a
+                        >
+                      </p>
+                      <p class="mb-0">
+                        <strong>Note:</strong> Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                      </p>
+                    </div>
+                  </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                  <a ngbNavLink href="#tab3" data-bs-toggle="tab" class=""
+                    ><i class="fa fa-university"></i> Bank Transfer</a
+                  >
+                  <ng-template ngbNavContent>
+                    <div class="tab-pane" id="tab3">
+                      <h6 class="font-weight-semibold">Bank account details</h6>
+                      <dl class="card-text">
+                        <dt>BANK:</dt>
+                        <dd>THE UNION BANK 0456</dd>
+                      </dl>
+                      <dl class="card-text">
+                        <dt>Account number:</dt>
+                        <dd>67542897653214</dd>
+                      </dl>
+                      <dl class="card-text">
+                        <dt>IBAN:</dt>
+                        <dd>543218769</dd>
+                      </dl>
+                      <p class="mb-0">
+                        <strong>Note:</strong> Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                      </p>
+                    </div>
+                  </ng-template>
+                </li>
+              </ul>
+              <div class="tab-content" [ngbNavOutlet]="nav"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Payments</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>Invoice ID</th>
+                    <th>Category</th>
+                    <th>Purchase Date</th>
+                    <th>Price</th>
+                    <th>Due Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let InvoiceData of InvoiceData">
+                <td>{{InvoiceData.id}}</td>
+                <td>{{InvoiceData.Category}}</td>
+                <td>{{InvoiceData.Date}}</td>
+                    <td class="fs-16 ">{{InvoiceData.Price}}</td>
+                      <td>{{InvoiceData.DeuDate}}</td>
+                    <td>
+                      <a
+                        class="btn ripple btn-primary btn-sm text-white mb-1 me-1"
+                        ngbTooltip="View" placement="top"
+                        ><i class="fa fa-eye"></i
+                      ></a>
+                      <a
+                        class="btn ripple btn-secondary btn-sm text-white mb-1 me-1"
+                      (click)="DeleteClick(InvoiceData.id)"
+                     ngbTooltip="Delete"  placement="top"
+                        ><i class="fa fa-trash-o"></i></a
+                      ><br />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="pagination">
+              <li class="page-item page-prev disabled">
+                <a class="page-link" href="javascript:void(0);" tabindex="-1"
+                  >Prev</a
+                >
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0);">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0);">3</a>
+              </li>
+              <li class="page-item page-next">
+                <a class="page-link" href="javascript:void(0);">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/User dashboard-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xl-6 col-md-12">
+        <div class="sub-newsletter">
+          <h3 class="mb-2 fs-20">
+            <i class="fa fa-paper-plane-o me-2"></i> Subscribe To Our
+            Onlinesletter
+          </h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-6 col-md-12">
+        <div class="input-group sub-input mt-1">
+          <input
+            type="text"
+            class="form-control input-lg"
+            placeholder="Enter your Email"
+          />
+          <button type="button" class="btn ripple btn-primary br-te-3 br-be-3">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Onlinesletter-->

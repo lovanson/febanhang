@@ -1,0 +1,75 @@
+<app-bannering1
+  [title]="'Register'"
+  [items]="['Home','Pages','Register']"
+></app-bannering1>
+<!--Section-->
+<section class="sptb">
+  <div class="container customerpage">
+    <div class="row">
+      <div class="single-page">
+        <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+          <div class="wrapper wrapper2">
+            <div class="card-body">
+              <div class="btn-list d-flex">
+                <a
+                  aria-label="google"
+                  href="https://www.google.com/gmail/"
+                  class="btn btn-google btn-block"
+                  ><i class="fa fa-google fa-1x me-2"></i> Google</a
+                >
+                <a
+                  aria-label="twitter"
+                  href="https://twitter.com/"
+                  class="btn btn-twitter"
+                  ><i class="fa fa-twitter fa-1x"></i
+                ></a>
+                <a
+                  aria-label="facebook"
+                  href="https://www.facebook.com/"
+                  class="btn btn-facebook me-0"
+                  ><i class="fa fa-facebook fa-1x"></i
+                ></a>
+              </div>
+            </div>
+            <hr class="divider" />
+            <form id="Register" class="card-body" tabindex="500">
+              <div class="name">
+                <input type="text" name="name" />
+                <label>Name</label>
+              </div>
+              <div class="mail">
+                <input type="email" name="mail" />
+                <label>Mail or Username</label>
+              </div>
+              <div class="passwd">
+                <input type="password" name="password" />
+                <label>Password</label>
+              </div>
+              <div class="submit">
+                <a
+                  class="btn ripple btn-primary btn-block"
+                  routerLink="/custom-pages/login"
+                  >Register</a
+                >
+              </div>
+              <p class="text-dark mb-0" ScrollTop>
+                Already have an account?<a
+                  routerLink="/custom-pages/login"
+                  class="text-primary ms-1"
+                  >Sign In</a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Section-->
+
+<!--Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

@@ -1,0 +1,110 @@
+<app-bannering1 [title]="'Invoice'" [items]="['Pages','Invoice']"></app-bannering1>
+		<!--Invoice-->
+		<section class="sptb">
+			<div class="container">
+				<div class="card mb-0">
+					<div class="card-header">
+						<h3 class="card-title">#INV-287</h3>
+						<div class="card-options">
+							<button type="button" class="btn ripple  btn-sm btn-secondary me-2"><i class="icon icon-wallet"></i> Pay Invoice</button>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="row ">
+							<div class="col-lg-6 ">
+								<p class="h3">Client Inc</p>
+								<address>
+									Street address<br>
+									State, City<br>
+									Region, Postal Code<br>
+									ltd@example.com
+								</address>
+							</div>
+							<div class="col-lg-6 text-end">
+								<p class="h3">Invoice To</p>
+								<address>
+									Street address<br>
+									State, City<br>
+									Region, Postal Code<br>
+									ctr@example.com
+								</address>
+							</div>
+						</div>
+						<div class=" text-dark">
+							<p class="mb-1 mt-5"><span class="font-weight-semibold">Invoice Date :</span> 12rd July 2020</p>
+							<p><span class="font-weight-semibold">Due Date :</span> 15th July 2020</p>
+						</div>
+						<div class="table-responsive push">
+							<table class="table table-bordered table-hover text-nowrap">
+								<tbody>
+									<tr>
+										<th class="text-center "></th>
+										<th>Item Lists</th>
+										<th class="text-center" >Quantity</th>
+										<th class="text-end">Price</th>
+									</tr>
+									<tr>
+										<td class="text-center">1</td>
+										<td>
+											<p class="font-w600 mb-1 py-0">HTML Admin Template</p>
+											<div class="text-muted py-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui </div>
+										</td>
+										<td class="text-center">1</td>
+	
+										<td class="text-end">$18</td>
+									</tr>
+									<tr>
+										<td class="text-center">2</td>
+										<td>
+											<p class="font-w600 mb-1 py-0">Angular Listing Template</p>
+											<div class="text-muted py-0">blanditiis praesentium voluptatum deleniti atque corrupti quos dolores </div>
+										</td>
+										<td class="text-center">1</td>
+										<td class="text-end">$20</td>
+									</tr>
+									<tr>
+										<td class="text-center">3</td>
+										<td>
+											<p class="font-w600 mb-1 py-0">Wordpress Hosting Template</p>
+											<div class="text-muted py-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui</div>
+										</td>
+										<td class="text-center">1</td>
+										<td class="text-end">$32</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="font-w600 text-end">Subtotal</td>
+										<td class="text-end">$70</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="font-w600 text-end">Vat Rate</td>
+										<td class="text-end">10%</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="font-w600 text-end">Vat Due</td>
+										<td class="text-end">$5</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="font-weight-semibold text-uppercase text-end">Total Due</td>
+										<td class="font-weight-semibold text-end">$75</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="text-end">
+											<button type="button" class="btn ripple  btn-secondary me-1"><i class="icon icon-wallet"></i> Pay Invoice</button>
+											<button type="button" class="btn ripple  btn-primary me-1" onClick="javascript:window.print();"><i class="icon icon-paper-plane"></i> Send Invoice</button>
+											<button type="button" class="btn ripple  btn-info me-1" onClick="javascript:window.print();"><i class="icon icon-printer"></i> Print Invoice</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="text-muted text-center">Thank you very much for doing business with us. We look forward to working with you again!</p>
+					</div>
+				</div>
+			</div>
+		</section><!--/Invoice-->
+
+		<!--Onlinesletter-->
+		<section class="sptb bg-white border-top">
+			 <app-subscribe-page></app-subscribe-page>
+		</section>
+		<!--/Onlinesletter-->

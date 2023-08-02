@@ -1,0 +1,12 @@
+::ng-deep {
+    // .ng-select.ng-select-single .ng-select-container {
+    //     width: 150px !important;
+    // }
+    .ngad-listing-image {
+        @media (min-width: 1400px) {
+            .tab-content #tab-11 .item-card9-imgs img {
+                height: 100%;
+            }
+        }  
+    }
+}

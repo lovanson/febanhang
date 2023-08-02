@@ -1,0 +1,28 @@
+::ng-deep{
+    .modal-header {
+            max-width: 800px !important;
+    }
+    @media only screen and (max-width: 991px){
+
+         .active .horizontalMenu {
+            display: block !important;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            visibility: visible;
+            z-index: 1000;
+            top: 0;
+            height: 100% !important;
+            width: 50%;
+        }
+     }
+
+         @media (min-width: 992px) {
+            .horizontalMenu-list.hor-width {
+                    width: inherit;
+                    margin: inherit;
+                }
+         }
+
+
+
+}

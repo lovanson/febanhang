@@ -1,0 +1,677 @@
+
+  <!-- Tabs -->
+          <ul ngbNav #nav="ngbNav" class="nav panel-tabs eductaional-tabs mb-6">
+            <li [ngbNavItem]="1" class="">
+              <a ngbNavLink class="">All</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane show">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6" *ngFor="let data of carddata">
+                      <div class="card overflow-hidden" >
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs">
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >{{data.tag}}</span
+                              >
+                            </div>
+                          </div>
+                          <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip1}}"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                            ngbTooltip="{{data.tooltip2}}"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                             ngbTooltip="{{data.tooltip3}}"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body" >
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                 {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                                {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                               <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                                [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >{{data.name}}<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart"></i> {{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a #scrollButton
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <a ngbNavLink>HTML</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6" *ngFor="let data of carddata1">
+                      <div class="card overflow-hidden">
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs" >
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >{{data.tag}}</span
+                              >
+                            </div>
+                          </div>
+                           <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip1}}"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip2}}"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip3}}"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                  {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                                {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                               <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                                ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                                [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >{{data.name}}<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart"></i> {{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+              <a ngbNavLink>Wordpress</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6"  *ngFor="let data of carddata2">
+                      <div class="card overflow-hidden">
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs">
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >{{data.tag}}</span
+                              >
+                            </div>
+                          </div>
+                         <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip1}}"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip2}}"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                              ngbTooltip="{{data.tooltip3}}"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                 {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                                {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                                 <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                                [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >{{data.name}}<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart"></i> {{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="4">
+              <a ngbNavLink class="">PHP</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6" *ngFor="let data of carddata3">
+                      <div class="card overflow-hidden">
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs">
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >PHP</span
+                              >
+                            </div>
+                          </div>
+                          <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="Add to Wishlist"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                              ngbTooltip="Buy Now"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                              ngbTooltip="View Details"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                  {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                                {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                                <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                                [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >Steven Fisher<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart"></i> {{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="5">
+              <a ngbNavLink class="">Angular</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane" id="tab-5">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6" *ngFor="let data of carddata4">
+                      <div class="card overflow-hidden" >
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs">
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >{{data.tag}}</span
+                              >
+                            </div>
+                          </div>
+                           <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="Add to Wishlist"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                              ngbTooltip="Buy Now"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                              ngbTooltip="View Details"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                 {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                               {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                               <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                               [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >{{data.name}}<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto ">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart me-1"></i>{{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="6">
+              <a ngbNavLink class="">PSD</a>
+              <ng-template ngbNavContent>
+                <div class="tab-pane" id="tab-6">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6" *ngFor="let data of carddata5">
+                      <div class="card overflow-hidden">
+                        <div class="ribbon ribbon-top-left text-danger">
+                          <span class="bg-danger">Featured</span>
+                        </div>
+                        <div class="item-card2-tans">
+                          <div class="item-card7-imgs">
+                            <a routerLink="/pages/otherpages-1/page-details"></a>
+                            <img
+                              [src]="data.src"
+                              alt="img"
+                              class="cover-image"
+                            />
+                            <div class="tag-text">
+                              <span class="bg-dark-transparent tag-option"
+                                >{{data.tag}}</span
+                              >
+                            </div>
+                          </div>
+                            <div class="item-card2-icons">
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-primary"
+                              placement="top"
+                              ngbTooltip="Add to Wishlist"
+                              ><i class="fe fe-heart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-secondary"
+                              placement="top"
+                              ngbTooltip="Buy Now"
+                              ><i class="fe fe-shopping-cart"></i
+                            ></a>
+                            <a
+                              href="javascript:void(0);"
+                              class="bg-info"
+                              placement="top"
+                              ngbTooltip="View Details"
+                              ><i class="fe fe-eye"></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="item-card7-desc">
+                            <div class="item-card7-text">
+                              <a routerLink="/pages/otherpages-1/page-details" class="text-dark"
+                                ><h4 class="font-weight-semibold">
+                                  {{data.title}}
+                                </h4></a
+                              >
+                              <p class="fs-13 mb-1 text-muted">
+                                 {{data.summery}}
+                              </p>
+                            </div>
+                            <div class="d-md-flex">
+                              <div class="d-inline-flex">
+                                <ngb-rating class="text-warning me-1" [(rate)]="currentRate" [max]="5"></ngb-rating>
+                   ({{currentRate}})
+                              </div>
+                              <div class="ms-auto">
+                                <div class="item-card9-cost">
+                                  <h4 class="mb-0">{{data.price}}</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer pt-3">
+                          <div class="footerimg d-flex mt-0 mb-0">
+                            <div class="d-flex align-items-center footerimg-l mb-0">
+                              <img
+                                [src]="data.src1"
+                                alt="image"
+                                class="avatar avatar-sm brround me-2"
+                              />
+                              <a
+                                href="javascript:void(0);"
+                                class="time-title text-muted p-0 leading-normal"
+                                >{{data.name}}<i
+                                  class="si si-check text-success fs-12 ms-1"
+                                  data-bs-toggle="tooltip"
+                                  data-bs-placement="top"
+                                  title="verified"
+                                ></i
+                              ></a>
+                            </div>
+                            <div class="footerimg-r ms-auto">
+                              <span class="text-muted"
+                                ><i class="fe fe-shopping-cart"></i> {{data.cart}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a
+                      routerLink="/pages/otherpages-2/ad-listing"
+                      class="btn ripple btn-primary"
+                      >View All Products</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+          <div class="tab-content text-start p-3" [ngbNavOutlet]="nav"></div>

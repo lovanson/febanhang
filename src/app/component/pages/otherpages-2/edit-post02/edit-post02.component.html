@@ -1,0 +1,305 @@
+<app-bannering1
+  [title]="'Edit Post2'"
+  [items]="['Pages', 'Categories']"
+></app-bannering1>
+<!--Section-->
+<section class="sptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="card">
+          <div class="card-body">
+            <form id="commentForm" method="get" class="form-horizontal mb-0">
+              <div id="rootwizard" class="border pt-0">
+                <ul ngbNav #nav="ngbNav" class="nav nav-tabs nav-justified">
+                  <li [ngbNavItem]="1" class="nav-item">
+                    <a
+                      ngbNavLink
+                      data-bs-toggle="tab"
+                      class="nav-link border-top-0 font-bold"
+                      >Step1</a
+                    >
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane active" id="first">
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Category</label>
+                          <ng-select class="select2-show-search" placeholder="HTML" [searchable]="false" [clearable]="false">
+                            <ng-option>Select</ng-option>
+                            <ng-option value="1">HTML</ng-option>
+                            <ng-option value="2">Wordpress</ng-option>
+                            <ng-option value="3">Angular</ng-option>
+                            <ng-option value="4">PHP</ng-option>
+                            <ng-option value="5">PSD</ng-option>
+                            <ng-option value="6">Others</ng-option>
+                          </ng-select>
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Title</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter Title"
+                            value="Andora – Admin WebApp HTML Dashboard Template"
+                          />
+                        </div>
+                      </div>
+                      <ul class="list-inline wizard mb-0 mt-4">
+                        <li class="previous list-inline-item disabled">
+                          <a  href="javascript:void(0);" class="btn ripple  btn-secondary mb-0">Previous</a>
+                        </li>
+                         <li class="next list-inline-item float-end">
+                          <a (click)="nav.select(2)" href="javascript:void(0);" class="btn ripple  btn-primary  mb-0">Continue</a>
+                        </li>
+                      </ul>
+                    </ng-template>
+                  </li>
+                  <li [ngbNavItem]="2" class="nav-item">
+                    <a
+                      ngbNavLink
+                      href="#second"
+                      data-bs-toggle="tab"
+                      class="nav-link border-top-0 font-bold"
+                      >Step2</a
+                    >
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="second">
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Features</label>
+                          <div class="row">
+                            <div
+                              class="col-md-4 col-sm-12 col-xs-12 mb-3 mb-xl-0"
+                            >
+                              <input
+                                type="text"
+                                placeholder="100% Fully Responsive"
+                                class="form-control"
+                              />
+                            </div>
+                            <div
+                              class="col-md-4 col-sm-12 col-xs-12 mb-3 mb-xl-0"
+                            >
+                              <input
+                                type="text"
+                                placeholder="Angular Framework"
+                                class="form-control"
+                              />
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                              <input
+                                type="text"
+                                placeholder="W3C Validated"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark"
+                            >Description</label
+                          >
+                          <textarea
+                            class="form-control"
+                            name="example-textarea-input"
+                            rows="6"
+                            placeholder="text here.."
+                            ngModel="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate essequasi, veritatis totam voluptas nostrum.Lorem ipsum dolor sit amet, consectetur."
+                          ></textarea>
+                        </div>
+                        <div class="control-group form-group">
+                          <div class="input-group file-browser">
+                            <ngx-dropzone
+                              class="form-control"
+                              (change)="onSelect($event)"
+                            >
+                              <ngx-dropzone-label
+                                >Choose File..</ngx-dropzone-label
+                              >
+                              <ngx-dropzone-preview
+                                *ngFor="let f of files"
+                                [removable]="true"
+                                (removed)="onRemove(f)"
+                              >
+                                <ngx-dropzone-label
+                                  >{{ f.name }} ({{
+                                    f.type
+                                  }})</ngx-dropzone-label
+                                >
+                              </ngx-dropzone-preview>
+                            </ngx-dropzone>
+                          </div>
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Image1</label>
+                          <ng-select class=" select2" placeholder="Image1" [searchable]="false" [clearable]="false">
+                            <ng-option>Image1</ng-option>
+                          </ng-select>
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Image2</label>
+                          <ng-select class=" select2" placeholder="Image2" [searchable]="false" [clearable]="false">
+                            <ng-option>Image2</ng-option>
+                          </ng-select>
+                        </div>
+                      </div>
+                      <ul class="list-inline wizard mb-0 mt-4">
+                        <li class="previous list-inline-item">
+                          <a (click)="nav.select(1)" href="javascript:void(0);" class="btn ripple  btn-secondary mb-0">Previous</a>
+                        </li>
+                        <li class="next list-inline-item float-end">
+                          <a (click)="nav.select(3)" href="javascript:void(0);" class="btn ripple  btn-primary  mb-0">Continue</a>
+                        </li>
+                      </ul>
+                    </ng-template>
+                  </li>
+                  <li [ngbNavItem]="3" class="nav-item">
+                    <a
+                      ngbNavLink
+                      data-bs-toggle="tab"
+                      class="nav-link border-top-0 font-bold"
+                      >Step3</a
+                    >
+                    <ng-template ngbNavContent>
+                      <div class="tab-pane" id="third">
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Tags</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder=""
+                            value="Bootstrap, Ads, Business, E-Commerce, Classified, Car, Real Estate|, Education , Jobs , Marketplace , Bidding , Coupons , Beauty, Multipurpose, Corporate, Business , Listing , Listings , Directory, Restaurant , Hotel,Company"
+                          />
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Price</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="$24"
+                          />
+                        </div>
+                        <div class="control-group form-group">
+                          <label class="form-label text-dark">Message</label>
+                          <textarea
+                            class="form-control"
+                            name="example-textarea-input"
+                            rows="6"
+                            placeholder="text here.."
+                            ngModel="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate essequasi, veritatis totam voluptas nostrum.Lorem ipsum dolor sit amet, consectetur."
+                          ></textarea>
+                        </div>
+                        <div class="custom-controls-stacked mb-4">
+                          <label class="custom-control form-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              name="example-checkbox1"
+                              value="option1"
+                            />
+                            <span class="custom-control-label"
+                              >I Agree, et iusto odio dignissimos ducimus qui
+                              blanditiis praesentium voluptatum deleniti
+                              atcorrupti quos dolores et quas molestias
+                              excepturi sint occaecati cupiditate non
+                              provident</span
+                            >
+                          </label>
+                        </div>
+                      </div>
+                      <ul class="list-inline wizard mb-0 mt-4">
+                        <li class="previous list-inline-item">
+                          <a (click)="nav.select(2)" href="javascript:void(0);" class="btn ripple  btn-secondary mb-0">Previous</a>
+                        </li> <li class="next list-inline-item float-end">
+                          <a  href="javascript:void(0);" class="btn ripple  btn-primary  mb-0">Submit</a>
+                        </li>
+                      </ul>
+                    </ng-template>
+                  </li>
+                </ul>
+                <div
+                  class="tab-content card-body mt-3 mb-0 b-0"
+                [ngbNavOutlet]="nav"
+                >
+                  <ul class="list-inline wizard mb-0 mt-4">
+                    <li class="previous list-inline-item">
+                      <button type="reset"
+                        href="javascript:void(0);"
+                        class="btn ripple btn-secondary mb-0"
+                        >Previous</button
+                      >
+                    </li>
+                    <li class="next list-inline-item float-end">
+                      <button type="submit"
+                        href="javascript:void(0);"
+                        class="btn ripple btn-primary mb-0"
+                        >Continue</button
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Terms And Conditions</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled widget-spec vertical-scroll mb-0">
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i>Money
+                Not Refundable
+              </li>
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i>You
+                can renew your Premium ad after experted.
+              </li>
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i
+                >Premium ads are active for depend on package.
+              </li>
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i>Money
+                Not Refundable
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card mb-0">
+          <div class="card-header">
+            <h3 class="card-title">Benefits Of Premium Items</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled widget-spec mb-0">
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i
+                >Premium Items Active
+              </li>
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i
+                >Premium ads are displayed on top
+              </li>
+              <li>
+                <i class="fa fa-check text-success" aria-hidden="true"></i
+                >Premium ads will be Show in Google results
+              </li>
+              <li class="ms-5 mb-0">
+                <a routerLink="/pages/otherpages-3/tips"> View more..</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+</section>
+<!--/Section-->
+
+<!-- Onlinesletter-->
+<section class="sptb bg-white border-top">
+  <app-subscribe-page></app-subscribe-page>
+</section>
+<!--/Onlinesletter-->

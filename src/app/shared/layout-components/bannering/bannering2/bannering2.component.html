@@ -1,0 +1,56 @@
+<!--Section-->
+<div
+  class="cover-image bg-background user-pattern-4 custon-bg-img"
+  data-bs-image-src="./assets/images/banners/banner4.jpg"
+>
+  <!--Section-->
+  <div>
+    <div class="sptb-5">
+      <div class="header-text1 mb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 col-lg-12 col-md-12 d-block mx-auto">
+              <div class="text-center text-white text-property mb-4">
+                <h1 class="">
+                  <span class="">6,894</span> Wordpress Themes Available Now!
+                </h1>
+              </div>
+              <div class="row">
+                <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
+                  <div class="search-form">
+                    <input
+                      type="text"
+                      class="form-control input-lg"
+                      id="text4"
+                      placeholder="Search Product....."
+                    />
+                    <button class="btn ripple">
+                      <i class="fe fe-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /header-text -->
+      </div>
+    </div>
+    <!--/Section-->
+  </div>
+  <!--/Section-->
+</div>
+ <!--Breadcrumb-->
+ <div class="bg-white border-bottom">
+  <div class="container">
+    <div class="page-header">
+      <h4 class="page-title">{{ title }}</h4>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" *ngFor="let item of items; let last = last" [class.active]="last">
+          <a href="javascript:void(0);" >{{ item }}</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/Breadcrumb-->

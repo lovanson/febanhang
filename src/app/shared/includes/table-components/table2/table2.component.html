@@ -1,0 +1,58 @@
+<div class="table-responsive">
+											<table class="table table-bordered border-0 table-vcenter text-nowrap border-top  mb-0">
+												<thead>
+													<tr>
+														<th>Name & Details</th>
+														<th>Items</th>
+														<th>Followers</th>
+														<th>Member Since</th>
+														<th>Sales</th>
+														<th>Rating</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr *ngFor="let table of data">
+														<td>
+															<div class="media mt-0">
+																<div class="card-aside-img">
+																	<img [src]="table.src" alt="img" class="bg-light">
+																</div>
+																<div class="media-body ms-3">
+																	<div class="ms-3 mt-1">
+																		<h4 class="font-weight-semibold mt-0">{{table.name}}</h4>
+																		<div class="author-user">
+																			<img [src]="table.tag1" alt="img">
+																			<img [src]="table.tag2" alt="img">
+																			<img [src]="table.tag3" alt="img">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</td>
+														<td >
+															<a href="javascript:void(0);" class="badge bg-success">{{table.item}}</a>
+														</td>
+														<td >
+															<h6 class=" text-dark fs-20 mb-0 mt-3 mt-md-0">{{table.follower}}</h6>
+														</td>
+														<td >
+															<a href="javascript:void(0);" class="font-weight-bold fs-15 text-dark">{{table.date}}</a>
+														</td>
+														<td >
+															<div class="text-lg-center mt-3 mt-md-0">
+																<h4 class=" text-dark fs-20 mb-0 mt-3 mt-md-0">{{table.sales}}</h4>
+																<span class="text-muted fs-13">Sales</span>
+															</div>
+														</td>
+														<td>
+															<div class="rating-stars block">
+																<input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4">
+																<div class="d-inline-flex">
+																<ngb-rating class="text-warning" [(rate)]="currentRate" [max]="5"></ngb-rating>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>

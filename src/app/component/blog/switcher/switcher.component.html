@@ -1,0 +1,270 @@
+<app-bannering
+  [title]="'Switcher'"
+  [items]="['Home', 'Switcher']"
+></app-bannering>
+<!--Contact-->
+<section class="sptb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-xl-6 col-md-6 py-2">
+        <div class="form_holder right-sidebar">
+          <div class="row justify-content-center">
+            <div class="card">
+              <div class="predefined_styles">
+                <div class="skin-theme-switcher">
+                  <div class="swichermainleft  text-center mt-2">
+                    <h4 class="p-3">LTR AND RTL VERSIONS</h4>
+                    <div class="switch_section p-3 m-0">
+                      <div class="switch-toggle d-flex mt-2">
+                        <span class="me-auto">LTR</span>
+                        <p class="onoffswitch2 my-0">
+                          <input
+                            type="radio"
+                            name="onoffswitch25"
+                            id="myonoffswitch54"
+                            class="onoffswitch2-checkbox"
+                            checked=""
+                          />
+                          <label
+                            for="myonoffswitch54"
+                            class="onoffswitch2-label"
+                          ></label>
+                        </p>
+                      </div>
+                      <div class="switch-toggle d-flex mt-2">
+                        <span class="me-auto">RTL</span>
+                        <p class="onoffswitch2 my-0">
+                          <input
+                            type="radio"
+                            name="onoffswitch25"
+                            id="myonoffswitch55"
+                            class="onoffswitch2-checkbox"
+                          />
+                          <label
+                            for="myonoffswitch55"
+                            class="onoffswitch2-label"
+                          ></label>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swichermainleft border-top text-center">
+                    <h4 class="p-3">Themes</h4>
+                    <div class="switch_section p-3 m-0">
+                      <div class="switch-toggle d-flex mt-2">
+                        <span class="me-auto">Light Theme</span>
+                        <p class="onoffswitch2 my-0">
+                          <input
+                            type="radio"
+                            name="onoffswitch1"
+                            id="myonoffswitch1"
+                            class="onoffswitch2-checkbox"
+                            checked=""
+                          />
+                          <label
+                            for="myonoffswitch1"
+                            class="onoffswitch2-label"
+                          ></label>
+                        </p>
+                      </div>
+                      <div class="switch-toggle d-flex mt-2">
+                        <span class="me-auto">Dark theme</span>
+                        <p class="onoffswitch2 my-0">
+                          <input
+                            type="radio"
+                            name="onoffswitch1"
+                            id="myonoffswitch2"
+                            class="onoffswitch2-checkbox"
+                          />
+                          <label
+                            for="myonoffswitch2"
+                            class="onoffswitch2-label"
+                          ></label>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swichermainleft border-top mt-2 text-center">
+                    <h4 class="p-3">Color Changes</h4>
+                    <div class="skin-body">
+                      <div class="switch_section">
+                        <div class="switch-toggle d-flex mt-2">
+                          <span class="me-auto">Primary Color</span>
+                          <div class="">
+                            <ngx-colors
+                              ngx-colors-trigger
+                              [(ngModel)]="color1"
+                              acceptLabel="Select"
+                              class="color-primary-Bg"
+                              data-id="bg-color"
+                              data-id1="bg-hover"
+                              data-id2="bg-border"
+                              data-id9="transparentcolor"
+                              (input)="dynamicBgPrimary($event)"
+                            >
+                            </ngx-colors>
+                          </div>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                          <span class="me-auto">Secondary Color</span>
+                          <div class="">
+                            <ngx-colors
+                              ngx-colors-trigger
+                              [(ngModel)]="color13"
+                              acceptLabel="Select"
+                              class="color-bg-Dark"
+                              data-id4="body"
+                              data-id3="theme"
+                              (input)="dynamicBgSecondary($event)"
+                            >
+                            </ngx-colors>
+                          </div>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                          <span class="me-auto">Background Color</span>
+                          <div class="">
+                            <ngx-colors
+                              ngx-colors-trigger
+                              [(ngModel)]="color4"
+                              acceptLabel="Select"
+                              class="color-bg-Dark"
+                              data-id5="body"
+                              data-id6="theme"
+                              (input)="dynamicBgDarkPrimary($event)"
+                            >
+                            </ngx-colors>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swichermainleft border-top text-center">
+                    <h4 class="p-3">Header Styles</h4>
+                    <div class="skin-body">
+                      <div class="switch_section">
+                        <div class="switch-toggle d-flex">
+                          <span class="me-auto">Default Header Style</span>
+                          <div class="onoffswitch2">
+                            <input
+                              type="radio"
+                              name="onoffswitch3"
+                              id="myonoffswitch6"
+                              class="onoffswitch2-checkbox"
+                              checked
+                            />
+                            <label
+                              for="myonoffswitch6"
+                              class="onoffswitch2-label"
+                            ></label>
+                          </div>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                          <span class="me-auto">Header Style 1</span>
+                          <div class="onoffswitch2">
+                            <input
+                              type="radio"
+                              name="onoffswitch3"
+                              id="myonoffswitch7"
+                              class="onoffswitch2-checkbox"
+                            />
+                            <label
+                              for="myonoffswitch7"
+                              class="onoffswitch2-label"
+                            ></label>
+                          </div>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                          <span class="me-auto">Header Style 2</span>
+                          <div class="onoffswitch2">
+                            <input
+                              type="radio"
+                              name="onoffswitch3"
+                              id="myonoffswitch8"
+                              class="onoffswitch2-checkbox"
+                            />
+                            <label
+                              for="myonoffswitch8"
+                              class="onoffswitch2-label"
+                            ></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swichermainleft border-top text-center">
+                    <h4 class="p-3">Menu Styles</h4>
+                    <div class="skin-body">
+                      <div class="switch_section">
+                        <div class="switch-toggle d-flex">
+                          <span class="me-auto">Default Menu Style</span>
+                          <div class="onoffswitch3">
+                            <input
+                              type="radio"
+                              name="onoffswitch2"
+                              id="myonoffswitch3"
+                              class="onoffswitch3-checkbox"
+                              checked
+                            />
+                            <label
+                              for="myonoffswitch3"
+                              class="onoffswitch3-label"
+                            ></label>
+                          </div>
+                        </div>
+                        <div class="switch-toggle mt-2 d-flex">
+                          <span class="me-auto">Menu Style 1</span>
+                          <div class="onoffswitch3">
+                            <input
+                              type="radio"
+                              name="onoffswitch2"
+                              id="myonoffswitch4"
+                              class="onoffswitch3-checkbox"
+                            />
+                            <label
+                              for="myonoffswitch4"
+                              class="onoffswitch3-label"
+                            ></label>
+                          </div>
+                        </div>
+                        <div class="switch-toggle mt-2 d-flex">
+                          <span class="me-auto">Menu Style 2</span>
+                          <div class="onoffswitch3">
+                            <input
+                              type="radio"
+                              name="onoffswitch2"
+                              id="myonoffswitch5"
+                              class="onoffswitch3-checkbox"
+                            />
+                            <label
+                              for="myonoffswitch5"
+                              class="onoffswitch3-label"
+                            ></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swichermainleft border-top mt-2 text-center">
+                    <h4 class="pt-3">Reset All Styles</h4>
+                    <div class="skin-body">
+                      <div class="switch_section my-4">
+                        <button
+                          class="btn btn-danger btn-block"
+                          (click)="reset()"
+                          type="button"
+                        >
+                          Reset All
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Conatct -->
